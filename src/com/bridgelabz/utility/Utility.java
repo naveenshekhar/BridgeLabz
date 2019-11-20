@@ -300,7 +300,7 @@ public class Utility {
 		int i = 0;
 
 		// Converting
-		while (n >= 1) {
+		while (n >0) {
 			int a = n % 2;
 			r = r + a;
 			n = n / 2;
