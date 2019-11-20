@@ -32,6 +32,7 @@ public class Utility {
 	/**
 	 * Finding the the percentage of Head vs Tail by taking user input as number of
 	 * flip.
+	 * 
 	 * @param n
 	 */
 
@@ -54,8 +55,10 @@ public class Utility {
 		System.out.println("Percentage of head vs tail is :" + (int) h_per + "%" + " vs " + (int) t_per + "%");
 		sc.close();
 	}
+
 	/**
 	 * Finding the leap year by taking appropriate user input.
+	 * 
 	 * @param n
 	 */
 
@@ -71,8 +74,10 @@ public class Utility {
 		}
 		sc.close();
 	}
+
 	/**
 	 * Finding the harmonic Value of the given input
+	 * 
 	 * @param n
 	 */
 
@@ -88,6 +93,7 @@ public class Utility {
 
 	/**
 	 * Method to take two-D-Array input using Generics
+	 * 
 	 * @return object Array
 	 */
 
@@ -135,10 +141,10 @@ public class Utility {
 		}
 		sc.close();
 	}
-	
-/**
- * Method for finding the roots of the equation a*x*x + b*x + c
- */
+
+	/**
+	 * Method for finding the roots of the equation a*x*x + b*x + c
+	 */
 	public static void isQuadratic() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter value of a :");
@@ -156,24 +162,24 @@ public class Utility {
 		System.out.println("Root 2 of 'X' :" + root2);
 		sc.close();
 	}
-	
+
 	/**
 	 * Method for checking either two strings are anagram or not.
+	 * 
 	 * @param str1
 	 * @param str2
 	 */
-
 	public static void isAnagram(String str1, String str2) {
-		
-		//converting Strings to Array
+
+		// converting Strings to Array
 		char ch1[] = str1.toCharArray();
 		char ch2[] = str2.toCharArray();
-		
-       //Sorting both the arrays
+
+		// Sorting both the arrays
 		Arrays.sort(ch1);
 		Arrays.sort(ch2);
-		
-		//Comparing both arrays either they are equal or not
+
+		// Comparing both arrays either they are equal or not
 		boolean result = Arrays.equals(ch1, ch2);
 
 		if (result) {
@@ -182,11 +188,12 @@ public class Utility {
 			System.out.println("Not Anagram..!!");
 		}
 	}
-	
-/**
- * Method to check for prime range between 0 and n
- * @param n
- */
+
+	/**
+	 * Method to check for prime range between 0 and n
+	 * 
+	 * @param n
+	 */
 	public static void isPrime(int n) {
 
 		int flag = 0;
@@ -204,53 +211,29 @@ public class Utility {
 			}
 		}
 	}
-	
+
 	/**
-	 * Static function to add day of week by from given equation,
-	 * Take user input as command line argument.
+	 * Static function to add day of week by from given equation, Take user input as
+	 * command line argument.
+	 * 
 	 * @param d
 	 * @param m
 	 * @param y
 	 */
-
-	public static void isWeek(int d, int m, int y) {
+	public static int isWeek(int d, int m, int y) {
 		int y0 = y - (14 - m) / 12;
 		int x = y0 + (y0 / 4) - (y0 / 100) + (y0 / 400);
 		int m0 = m + 12 * ((14 / m) / 12) - 2;
 		int d0 = (d + x + 31 * m0 / 12) % 7;
-
-		switch (d0) {
-		case 0:
-			System.out.println("Sunday");
-			break;
-		case 1:
-			System.out.println("Monday");
-			break;
-		case 2:
-			System.out.println("Tuesday");
-			break;
-		case 3:
-			System.out.println("Wednesday");
-			break;
-		case 4:
-			System.out.println("Thrusday");
-			break;
-		case 5:
-			System.out.println("Friday");
-			break;
-		case 6:
-			System.out.println("Saturday");
-			break;
-		}
+		return d0;
 	}
-	
+
 	/**
-	 * Method for temprature conversion 
-	 * i.e:-fahrenheit to celsious and vice-versa
+	 * Method for temprature conversion i.e:-fahrenheit to celsious and vice-versa
+	 * 
 	 * @param temp
 	 * @param i
 	 */
-
 	public static void isTemprature(int temp, String i) {
 		switch (i) {
 		case "f":
@@ -265,8 +248,9 @@ public class Utility {
 	}
 
 	/**
-	 *  static function to calculate monthly payment,
-	 *  Taking input as command line argument.
+	 * static function to calculate monthly payment, Taking input as command line
+	 * argument.
+	 * 
 	 * @param P
 	 * @param Y
 	 * @param R
@@ -280,8 +264,8 @@ public class Utility {
 	}
 
 	/**
-	 * Static funcxtion to compute square root of non_negative 
-	 * number.
+	 * Static funcxtion to compute square root of non_negative number.
+	 * 
 	 * @param c
 	 */
 
@@ -307,37 +291,58 @@ public class Utility {
 
 	/**
 	 * Static function to convert decimal to binary
+	 * 
 	 * @param n
 	 * @return s
 	 */
 	public static String toBinary(int n) {
 		String r = "";
 		int i = 0;
-		
-		//Converting
+
+		// Converting
 		while (n >= 1) {
 			int a = n % 2;
 			r = r + a;
 			n = n / 2;
 			i++;
 		}
-		
-		//Padding
+
+		// Padding
 		String s = "";
 		for (i = r.length() - 1; i >= 0; i--) {
 			s = s + r.charAt(i);
 		}
 		return s;
 	}
+	
+	/**
+	 * function to search for triplets in array
+	 * whose sum is zero.
+	 * @param 
+	 * @return Triplets
+	 */
+
+	public static void isSumOfThree() {
+		int[] a = { 12, 7, 9, -15, 3 };
+		for (int i = 0; i < a.length; i++) {
+			for (int j = i; j < a.length; j++) {
+				for (int k = j; k < a.length; k++) {
+					if (a[i] + a[j] + a[k] == 0) {
+						System.out.println("Numbers are :" + a[i] + ", " + a[j] + ", " + a[k]);
+					}
+				}
+			}
+		}
+	}
 
 	/**
 	 * function to take input for 1-D-Array for Integer
+	 * 
 	 * @param size
 	 * @return integer array
 	 */
 
 	public static int[] input1DArray(int size) {
-		Scanner sc = new Scanner(System.in);
 		int array[] = new int[size];
 		System.out.println("Enter elements of array :");
 		for (int i = 0; i < size; i++) {
@@ -347,7 +352,8 @@ public class Utility {
 	}
 
 	/**
-	 *  1D String array input
+	 * 1D String array input
+	 * 
 	 * @param size
 	 * @return String Array
 	 */
@@ -371,10 +377,11 @@ public class Utility {
 		System.out.println();
 	}
 
-/**
- * Printing 1-D-String ARRAY
- * @param array
- */
+	/**
+	 * Printing 1-D-String ARRAY
+	 * 
+	 * @param array
+	 */
 
 	public static void print1DStringArray(String array[]) {
 		for (int i = 0; i < array.length; i++) {
@@ -384,7 +391,29 @@ public class Utility {
 	}
 
 	/**
+	 * function to check for palindrome
+	 * 
+	 * @param n
+	 * @return boolean
+	 */
+
+	public static boolean isPalindrome(int n) {
+		int r, s = 0, temp = n;
+		while (n != 0) {
+			r = n % 10;
+			s = (s * 10) + r;
+			n = n / 10;
+		}
+		if (temp == s) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
 	 * Binary search for Integer
+	 * 
 	 * @param item
 	 * @param inputArray
 	 * @return integer mid
@@ -409,6 +438,7 @@ public class Utility {
 
 	/***
 	 * Binary sort for String.
+	 * 
 	 * @param item
 	 * @param inputArray
 	 * @return integer array
@@ -431,6 +461,7 @@ public class Utility {
 
 	/**
 	 * Bubble sort for Integer.
+	 * 
 	 * @param numbers
 	 * @return integer number
 	 */
@@ -448,9 +479,10 @@ public class Utility {
 		}
 		return numbers;
 	}
-	
+
 	/**
 	 * Insertion sort for integer.
+	 * 
 	 * @param array
 	 * @return
 	 */
@@ -468,9 +500,10 @@ public class Utility {
 		}
 		return array;
 	}
-	
+
 	/**
 	 * printing the string in sorted order by using insertion sort.
+	 * 
 	 * @param words
 	 * @return string
 	 */
@@ -493,6 +526,7 @@ public class Utility {
 
 	/**
 	 * FUNCTION TO SWAPPING THE NIBBLE
+	 * 
 	 * @param number
 	 * @return number
 	 */
@@ -501,6 +535,5 @@ public class Utility {
 		return ((number & 0x0F) << 4 | (number & 0xF0) >> 4);
 
 	}
-	
 
 }

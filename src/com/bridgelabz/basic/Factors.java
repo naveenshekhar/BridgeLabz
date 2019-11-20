@@ -1,4 +1,5 @@
-/* @Author  : Naveen Shekhar
+/**
+ *  @Author  : Naveen Shekhar
  * @version : 1.0
  * @ purpose: Finding the Prime factors of user input number 
   			  by using brute force method	

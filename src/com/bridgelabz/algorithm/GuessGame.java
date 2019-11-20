@@ -1,3 +1,11 @@
+/**
+ *  @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @ purpose: program takes a input between 0 to n and guess the 
+ * 			  number.	
+ * @Date    : 16:11:2019
+ * @File    : GuessGame.java 
+ */
 package com.bridgelabz.algorithm;
 
 import com.bridgelabz.utility.Utility;

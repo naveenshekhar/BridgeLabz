@@ -1,3 +1,12 @@
+/**
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @ purpose: Program to print the percentage of head vs tail,
+ * 			  user gives the input for number of toss,
+ * 			  computer decides the head vs tail using random function.
+ * @Date    : 17:11:2019
+ * @File    : FlipCoin.java 
+ */
 package com.bridgelabz.basic;
 
 import java.util.Scanner;

@@ -6,21 +6,12 @@
  */
 package com.bridgelabz.functional;
 
+import com.bridgelabz.utility.Utility;
+
 public class SumOfThree {
-	public static void isSumOfThree() {
-		int[] a = { 12, 7, 9, -15, 3 };
-		for (int i = 0; i < a.length; i++) {
-			for (int j = i; j < a.length; j++) {
-				for (int k = j; k < a.length; k++) {
-					if (a[i] + a[j] + a[k] == 0) {
-						System.out.println("Numbers are :" + a[i] + ", " + a[j] + ", " + a[k]);
-					}
-				}
-			}
-		}
-	}
+	
 
 	public static void main(String[] args) {
-		isSumOfThree();
+		Utility.isSumOfThree();
 	}
 }

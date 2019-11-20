@@ -15,11 +15,9 @@ public class TwoDArray<T> {
 		Object arr[][] = Utility.TwoDInput();
 		for (Object n[] : arr) {
 			for (Object m : n) {
-				System.out.print(m + " ");
+				System.out.print(m +" ");
 			}
 			System.out.println();
 		}
-
 	}
-
 }

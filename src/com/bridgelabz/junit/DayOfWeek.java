@@ -10,11 +10,13 @@ import com.bridgelabz.utility.Utility;
 
 public class DayOfWeek {
 	public static void main(String[] args) {
+
+		// taking input from command line argument.
 		int d = Integer.parseInt(args[0]);
 		int m = Integer.parseInt(args[1]);
 		int y = Integer.parseInt(args[2]);
 
-		int d0=Utility.isWeek(d, m, y);
+		int d0 = Utility.isWeek(d, m, y);
 		switch (d0) {
 		case 0:
 			System.out.println("Sunday");

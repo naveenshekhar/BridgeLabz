@@ -1,3 +1,10 @@
+/**
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @ purpose: Program to replace by user input.
+ * @Date    : 17:11:2019
+ * @File    : RegEx.java 
+ */
 package com.bridgelabz.algorithm;
 
 public class RegEx {

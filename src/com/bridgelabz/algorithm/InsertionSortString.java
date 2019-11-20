@@ -1,3 +1,11 @@
+/**
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @ purpose: program takes String Array as input and prints
+ * 			  in sorted order.
+ * @Date    : 16:11:2019
+ * @File    : InsertionSortString.java 
+ */
 package com.bridgelabz.algorithm;
 
 import java.util.Scanner;
