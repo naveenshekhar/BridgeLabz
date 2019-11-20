@@ -1,18 +1,25 @@
-/* ****************************************************
+/* ***************************************************
  * @Author  : Naveen Shekhar
  * @version : 1.0
- * @ purpose: Functional-Utility
- * @Date    : 02:11:2019 - 04:11:2019
+ * @ purpose: Utility(BASIC, ALGORITHM, FUNCTIONAL, JUNIT AND LOGICAL) 
+ * @Date    : 13:11:2019 - 19:11:2019
  * @File    : Utility.java
- * ****************************************************/
+ * ***************************************************/
 package com.bridgelabz.utility;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Utility {
 
+	/**
+	 * static scanner class for code reusability.
+	 */
 	public static Scanner sc = new Scanner(System.in);
 
+	/**
+	 * Method for replacing the "<<UserName>>" with Scanner input.
+	 */
 	public static void isReplace() {
 		String str = "Hello <<UserName>>, How are you?";
 		System.out.println("Enter Your name :");
@@ -21,6 +28,12 @@ public class Utility {
 		System.out.println(replace);
 		sc.close();
 	}
+
+	/**
+	 * Finding the the percentage of Head vs Tail by taking user input as number of
+	 * flip.
+	 * @param n
+	 */
 
 	public static void isFlip(int n) {
 		double head = 0;
@@ -41,6 +54,10 @@ public class Utility {
 		System.out.println("Percentage of head vs tail is :" + (int) h_per + "%" + " vs " + (int) t_per + "%");
 		sc.close();
 	}
+	/**
+	 * Finding the leap year by taking appropriate user input.
+	 * @param n
+	 */
 
 	public static void isLeapYear(int n) {
 		if (n > 999 && n <= 9999) {
@@ -54,6 +71,10 @@ public class Utility {
 		}
 		sc.close();
 	}
+	/**
+	 * Finding the harmonic Value of the given input
+	 * @param n
+	 */
 
 	public static void isHarmonic(int n) {
 		double harmonic = 1;
@@ -64,37 +85,48 @@ public class Utility {
 			System.out.println("Nth Harmonic value :" + (int) harmonic);
 		}
 	}
-	
-	public static Object[][] TwoDInput() 
-	{
-	System.out.println("Enter the rows :");	
-	int m=sc.nextInt();
-	System.out.println("Enter the coloums :");
-	int n=sc.nextInt();
-	Object array[][]=new Object[m][n];
-	for(int i=0;i<m;i++)
-	{
-		for(int j=0;j<n;j++)
-		{
-			array[i][j]=sc.next();
-		}
-	}
-	return array;
-}
 
+	/**
+	 * Method to take two-D-Array input using Generics
+	 * @return object Array
+	 */
+
+	public static Object[][] TwoDInput() {
+		System.out.println("Enter the rows :");
+		int m = sc.nextInt();
+		System.out.println("Enter the coloums :");
+		int n = sc.nextInt();
+		Object array[][] = new Object[m][n];
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				array[i][j] = sc.next();
+			}
+		}
+		return array;
+	}
+
+	/**
+	 * Method for taking Two-D-Array input by asking array size and displaying the
+	 * output
+	 */
 	public static void isTwoDArray() {
-		Scanner sc = new Scanner(System.in);
+
+		// Asking for size of array to the user and stroring in m and n.
 		System.out.println("Enter number of rows :");
 		int m = sc.nextInt();
 		System.out.println("Enter number of coloums :");
 		int n = sc.nextInt();
 		int[][] array = new int[m][n];
 
+		// Taking the elements from user
+		System.out.println("Enter elements of the array :");
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
 				array[i][j] = sc.nextInt();
 			}
 		}
+
+		// printing the array elements output.
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
 				System.out.print(" " + array[i][j]);
@@ -103,8 +135,10 @@ public class Utility {
 		}
 		sc.close();
 	}
-
 	
+/**
+ * Method for finding the roots of the equation a*x*x + b*x + c
+ */
 	public static void isQuadratic() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter value of a :");
@@ -122,13 +156,24 @@ public class Utility {
 		System.out.println("Root 2 of 'X' :" + root2);
 		sc.close();
 	}
+	
+	/**
+	 * Method for checking either two strings are anagram or not.
+	 * @param str1
+	 * @param str2
+	 */
 
 	public static void isAnagram(String str1, String str2) {
+		
+		//converting Strings to Array
 		char ch1[] = str1.toCharArray();
 		char ch2[] = str2.toCharArray();
-
+		
+       //Sorting both the arrays
 		Arrays.sort(ch1);
 		Arrays.sort(ch2);
+		
+		//Comparing both arrays either they are equal or not
 		boolean result = Arrays.equals(ch1, ch2);
 
 		if (result) {
@@ -137,7 +182,11 @@ public class Utility {
 			System.out.println("Not Anagram..!!");
 		}
 	}
-
+	
+/**
+ * Method to check for prime range between 0 and n
+ * @param n
+ */
 	public static void isPrime(int n) {
 
 		int flag = 0;
@@ -155,21 +204,51 @@ public class Utility {
 			}
 		}
 	}
-	/*
-	 * Finding the day of week
+	
+	/**
+	 * Static function to add day of week by from given equation,
+	 * Take user input as command line argument.
+	 * @param d
+	 * @param m
+	 * @param y
 	 */
 
-	public static int isWeek(int d, int m, int y) {
+	public static void isWeek(int d, int m, int y) {
 		int y0 = y - (14 - m) / 12;
 		int x = y0 + (y0 / 4) - (y0 / 100) + (y0 / 400);
 		int m0 = m + 12 * ((14 / m) / 12) - 2;
 		int d0 = (d + x + 31 * m0 / 12) % 7;
-return d0;
-		
+
+		switch (d0) {
+		case 0:
+			System.out.println("Sunday");
+			break;
+		case 1:
+			System.out.println("Monday");
+			break;
+		case 2:
+			System.out.println("Tuesday");
+			break;
+		case 3:
+			System.out.println("Wednesday");
+			break;
+		case 4:
+			System.out.println("Thrusday");
+			break;
+		case 5:
+			System.out.println("Friday");
+			break;
+		case 6:
+			System.out.println("Saturday");
+			break;
+		}
 	}
-	/*
-	 * 
-	 * 
+	
+	/**
+	 * Method for temprature conversion 
+	 * i.e:-fahrenheit to celsious and vice-versa
+	 * @param temp
+	 * @param i
 	 */
 
 	public static void isTemprature(int temp, String i) {
@@ -185,9 +264,12 @@ return d0;
 		}
 	}
 
-	/*
-	 * 
-	 * 
+	/**
+	 *  static function to calculate monthly payment,
+	 *  Taking input as command line argument.
+	 * @param P
+	 * @param Y
+	 * @param R
 	 */
 
 	public static void isMonthlyPayment(int P, int Y, int R) {
@@ -197,10 +279,10 @@ return d0;
 		System.out.println(payment);
 	}
 
-	/*
-	 * 
-	 * 
-	 * 
+	/**
+	 * Static funcxtion to compute square root of non_negative 
+	 * number.
+	 * @param c
 	 */
 
 	public static void isSqrt(double c) {
@@ -223,19 +305,24 @@ return d0;
 		}
 	}
 
-	/*
-	 * 
-	 * 
+	/**
+	 * Static function to convert decimal to binary
+	 * @param n
+	 * @return s
 	 */
 	public static String toBinary(int n) {
 		String r = "";
 		int i = 0;
+		
+		//Converting
 		while (n >= 1) {
 			int a = n % 2;
 			r = r + a;
 			n = n / 2;
 			i++;
 		}
+		
+		//Padding
 		String s = "";
 		for (i = r.length() - 1; i >= 0; i--) {
 			s = s + r.charAt(i);
@@ -243,10 +330,10 @@ return d0;
 		return s;
 	}
 
-	/*
-	 * 
-	 * 
-	 * 
+	/**
+	 * function to take input for 1-D-Array for Integer
+	 * @param size
+	 * @return integer array
 	 */
 
 	public static int[] input1DArray(int size) {
@@ -259,10 +346,13 @@ return d0;
 		return array;
 	}
 
-	// 1D String array input
+	/**
+	 *  1D String array input
+	 * @param size
+	 * @return String Array
+	 */
 
 	public static String[] Input1DStringArray(int size) {
-		Scanner sc = new Scanner(System.in);
 		String array[] = new String[size];
 		System.out.println("Enter elements of array :");
 		for (int i = 0; i < size; i++) {
@@ -281,7 +371,10 @@ return d0;
 		System.out.println();
 	}
 
-	// Printing 1D String array
+/**
+ * Printing 1-D-String ARRAY
+ * @param array
+ */
 
 	public static void print1DStringArray(String array[]) {
 		for (int i = 0; i < array.length; i++) {
@@ -290,7 +383,12 @@ return d0;
 
 	}
 
-	// Binary search for integer
+	/**
+	 * Binary search for Integer
+	 * @param item
+	 * @param inputArray
+	 * @return integer mid
+	 */
 	public static int isBinary(int item, int[] inputArray) {
 		int li = 0;
 		int hi = inputArray.length - 1;
@@ -309,7 +407,12 @@ return d0;
 		return -1;
 	}
 
-	// Binary search for String.
+	/***
+	 * Binary sort for String.
+	 * @param item
+	 * @param inputArray
+	 * @return integer array
+	 */
 	public static int isBinaryString(String item, String[] inputArray) {
 		int li = 0;
 		int hi = inputArray.length - 1;
@@ -326,7 +429,11 @@ return d0;
 		return -1;
 	}
 
-	// Bubble sort for integer
+	/**
+	 * Bubble sort for Integer.
+	 * @param numbers
+	 * @return integer number
+	 */
 
 	public static int[] isBubble(int numbers[]) {
 		int temp;
@@ -341,6 +448,12 @@ return d0;
 		}
 		return numbers;
 	}
+	
+	/**
+	 * Insertion sort for integer.
+	 * @param array
+	 * @return
+	 */
 
 	public static int[] insertionSort(int[] array) {
 		int temp, j;
@@ -355,6 +468,12 @@ return d0;
 		}
 		return array;
 	}
+	
+	/**
+	 * printing the string in sorted order by using insertion sort.
+	 * @param words
+	 * @return string
+	 */
 
 	public static String[] insertionSortString(String words[]) {
 		String temp;
@@ -372,10 +491,16 @@ return d0;
 		return words;
 	}
 
+	/**
+	 * FUNCTION TO SWAPPING THE NIBBLE
+	 * @param number
+	 * @return number
+	 */
 	public static int swapNibble(int number) {
 
 		return ((number & 0x0F) << 4 | (number & 0xF0) >> 4);
 
 	}
+	
 
 }
