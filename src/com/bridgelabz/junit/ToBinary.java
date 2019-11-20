@@ -8,8 +8,7 @@ public class ToBinary
 	{
 		System.out.println("Enter Decimal to convert into binary :");
 		int n=Utility.sc.nextInt();
-		Utility.toBinary(n);
-		
+		Utility.toBinary(n);	
 	}
 
 }

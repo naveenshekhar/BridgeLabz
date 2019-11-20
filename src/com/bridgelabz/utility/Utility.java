@@ -1,4 +1,4 @@
-/* ***************************************************
+/* **************************************************
  * @Author  : Naveen Shekhar
  * @version : 1.0
  * @ purpose: Utility(BASIC, ALGORITHM, FUNCTIONAL, JUNIT AND LOGICAL) 
@@ -110,10 +110,14 @@ public class Utility {
 		}
 		return array;
 	}
-
+//
+//	/**
+//	 * Method for taking Two-D-Array input by asking array size and displaying the
+//	 * output
+//	 * 
+//	 */
 	/**
-	 * Method for taking Two-D-Array input by asking array size and displaying the
-	 * output
+	 * 
 	 */
 	public static void isTwoDArray() {
 
@@ -144,9 +148,10 @@ public class Utility {
 
 	/**
 	 * Method for finding the roots of the equation a*x*x + b*x + c
+	 * @param int a,b and c.
+	 * @return void
 	 */
 	public static void isQuadratic() {
-		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter value of a :");
 		int a = sc.nextInt();
 		System.out.println("Enter value of b :");
@@ -166,8 +171,8 @@ public class Utility {
 	/**
 	 * Method for checking either two strings are anagram or not.
 	 * 
-	 * @param str1
-	 * @param str2
+	 * @param two strings
+	 * @return void
 	 */
 	public static void isAnagram(String str1, String str2) {
 
@@ -193,6 +198,7 @@ public class Utility {
 	 * Method to check for prime range between 0 and n
 	 * 
 	 * @param n
+	 * @return void
 	 */
 	public static void isPrime(int n) {
 
@@ -213,12 +219,12 @@ public class Utility {
 	}
 
 	/**
-	 * Static function to add day of week by from given equation, Take user input as
+	 * Static function to add day of week from given equation, Take user input as
 	 * command line argument.
-	 * 
 	 * @param d
 	 * @param m
 	 * @param y
+	 * @return Integer, day of week
 	 */
 	public static int isWeek(int d, int m, int y) {
 		int y0 = y - (14 - m) / 12;
@@ -291,7 +297,6 @@ public class Utility {
 
 	/**
 	 * Static function to convert decimal to binary
-	 * 
 	 * @param n
 	 * @return s
 	 */
@@ -413,7 +418,6 @@ public class Utility {
 
 	/**
 	 * Binary search for Integer
-	 * 
 	 * @param item
 	 * @param inputArray
 	 * @return integer mid
@@ -438,7 +442,6 @@ public class Utility {
 
 	/***
 	 * Binary sort for String.
-	 * 
 	 * @param item
 	 * @param inputArray
 	 * @return integer array
@@ -461,7 +464,6 @@ public class Utility {
 
 	/**
 	 * Bubble sort for Integer.
-	 * 
 	 * @param numbers
 	 * @return integer number
 	 */
@@ -482,9 +484,8 @@ public class Utility {
 
 	/**
 	 * Insertion sort for integer.
-	 * 
 	 * @param array
-	 * @return
+	 * @return integer array
 	 */
 
 	public static int[] insertionSort(int[] array) {
@@ -503,7 +504,6 @@ public class Utility {
 
 	/**
 	 * printing the string in sorted order by using insertion sort.
-	 * 
 	 * @param words
 	 * @return string
 	 */
@@ -528,7 +528,7 @@ public class Utility {
 	 * FUNCTION TO SWAPPING THE NIBBLE
 	 * 
 	 * @param number
-	 * @return number
+	 * @return integer number
 	 */
 	public static int swapNibble(int number) {
 
