@@ -46,7 +46,7 @@ public class LinkedList<T> {
 			temp.next=null;
 		}
 	}
-	
+
 	/**
 	 * Removing from list
 	 */
@@ -73,19 +73,24 @@ public class LinkedList<T> {
 	public boolean search(T item)
 	{
 		Node temp=head;
-		if(head==null)
+		while(temp.next!=null)
 		{
-			System.out.println("List is empty..!!");
-		}
-		else
-		{
-			while(temp.data!=item)
+			if(temp.data==item)
 			{
-				
+				return true;			
 			}
+			else if(temp.data.equals(item))
+			{
+				return true;
+			}
+			temp=temp.next;
 		}
 		return false;
 	}
+
+	/**
+	 * Displaying the output
+	 */
 
 	public  void show() {
 		Node temp = head;
@@ -100,25 +105,29 @@ public class LinkedList<T> {
 		}
 	}
 
-//	public static void main(String[] args) {
-//		LinkedList list = new LinkedList();
-//		
-//		list.add("bhai");
-//		list.add("nana");
-//		list.add("kaka");
-//		list.add("lala");
-//		list.add(5.5);
-//		list.add(10);
-//		list.add(20);
-//		list.add(30);
-//		list.add(40);
-//		list.add(50);
-//		list.add(60);
-//		list.show();
-//		list.pop();
-//		list.remove();
-//		list.show();
-//
-//	}
+	public static void main(String[] args) {
+		LinkedList list = new LinkedList();
+
+		list.add("bhai");
+		list.add("nana");
+		list.add("kaka");
+		list.add("lala");
+		list.add(5.5);
+		list.add(10);
+		System.out.println(list.search(190));
+		list.add(20);
+		list.add(30);
+		list.add(40);
+		list.add(50);
+		list.add(60);
+		list.show();
+		System.out.println(list.search("kaka"));
+
+
+		list.pop();
+		list.remove();
+		list.show();
+
+	}
 
 }
