@@ -146,7 +146,7 @@ public class OrderedLinkList<T extends Comparable> {
 		oll.add(45);
 		oll.add(100);
 		oll.add(2000);
-		oll.add(1500);
+		oll.add(1500); 
 		oll.add(15);
 		oll.remove(43);
 		oll.remove(2000);
