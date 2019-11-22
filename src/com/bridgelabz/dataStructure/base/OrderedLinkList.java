@@ -66,26 +66,58 @@ public class OrderedLinkList<T extends Comparable> {
 	/**
 	 * 
 	 */
-//	public boolean search(T item)
-//	{
-//		Node temp=head;
-//		if(head.data.equals(item))
-//		{
-//			return true;
-//		}
-//		else
-//		{
-//			while(temp.next!=null)
-//			{
-//				if(temp.data.equals(item))
-//				{
-//					return true;
-//				}
-//			}
-//		}
-//		return false;
-//	}
+	public boolean search(T item)
+	{
+		Node temp=head;
+		if(head.data.equals(item))
+		{
+			return true;
+		}
+		else
+		{
+			while(temp.next!=null)
+			{
+				temp=temp.next;
+				if(temp.data.equals(item))
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 	
+	/**
+	 * Checks either list is empty or not
+	 */
+	public boolean isEmpty()
+	{
+		if(head==null)
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	/**
+	 *Returns the size of the list.
+	 */
+	public int size()
+	{ 
+		int size=0;
+		Node temp=head;
+		if(head==null)
+		{
+			System.out.println("List is Empty");
+		}
+		else;
+		while(temp.next!=null)
+		{
+			size++;
+			temp=temp.next;	
+		}
+		return size;
+	}
 	
 	/**
 	 * Displaying the output
@@ -107,6 +139,7 @@ public class OrderedLinkList<T extends Comparable> {
 
 		OrderedLinkList<Integer> oll = new OrderedLinkList<Integer>();
 
+		System.out.println(oll.isEmpty());
 		oll.add(63);
 		oll.add(43);
 		oll.add(53);
@@ -118,9 +151,11 @@ public class OrderedLinkList<T extends Comparable> {
 		oll.remove(43);
 		oll.remove(2000);
 		oll.show();
-//		System.out.println(oll.search(150));
-//		System.out.println(oll.search(1500));
+		System.out.println(oll.isEmpty());
+		System.out.println(oll.search(150));
+		System.out.println(oll.search(1500));
 		oll.show();
+		System.out.println(oll.size());
 	}
 
 }
