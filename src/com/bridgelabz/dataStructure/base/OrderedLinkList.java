@@ -1,9 +1,8 @@
 package com.bridgelabz.dataStructure.base;
 
-import com.bridgelabz.dataStructure.base.LinkedList.Node;
-
 public class OrderedLinkList<T extends Comparable> {
 	Node head;
+	Node tail;
 
 	class Node {
 		T data;
@@ -19,37 +18,84 @@ public class OrderedLinkList<T extends Comparable> {
 		Node node = new Node(item);
 		Node temp = head;
 		Node prev = null;
+
 		if (head == null) {
 			head = node;
-		} else if (head.data.compareTo(item) >0) {
+		} else if (item.compareTo(head.data) < 0) {
 			node.next = head;
 			head = node;
-		}
+		} else {
+			while (temp.next != null) {
+				if (temp.data.compareTo(item) < 0 && temp.next.data.compareTo(item) > 0) {
+					node.next = temp.next;
 
-		else {
-			while (temp.data.compareTo(item) > 0 && temp.next != null) {
-
-				prev = temp;
+					temp.next = node;
+					return;
+				}
 				temp = temp.next;
 			}
-			prev.next = node;
-			node.next = temp;
+			temp.next = node;
+			node.next = null;
 		}
 	}
 
 	/**
+	 * Removing the perticular element
+	 */
+	public void remove(T item) {
+		Node temp = head;
+		Node prev = null;
+		if (item.equals(head.data)) {
+			head = head.next;
+
+		} else {
+			while (temp.next != null) {
+				prev = temp;
+				temp = temp.next;
+				if (temp.data.equals(item)) {
+					prev.next = prev.next.next;
+					temp.next = null;
+					return;
+				}
+
+			}
+			prev.next = null;
+		}
+	}
+
+	/**
+	 * 
+	 */
+//	public boolean search(T item)
+//	{
+//		Node temp=head;
+//		if(head.data.equals(item))
+//		{
+//			return true;
+//		}
+//		else
+//		{
+//			while(temp.next!=null)
+//			{
+//				if(temp.data.equals(item))
+//				{
+//					return true;
+//				}
+//			}
+//		}
+//		return false;
+//	}
+	
+	
+	/**
 	 * Displaying the output
 	 */
-	public void show() 
-	{
+	public void show() {
 		Node temp = head;
-		if (head == null)
-		{
+		if (head == null) {
 			System.out.println("list is empty..!!");
-		} else 
-		{
-			while (temp.next != null)
-			{
+		} else {
+			while (temp.next != null) {
 				System.out.print(temp.data + " ");
 				temp = temp.next;
 			}
@@ -61,10 +107,19 @@ public class OrderedLinkList<T extends Comparable> {
 
 		OrderedLinkList<Integer> oll = new OrderedLinkList<Integer>();
 
+		oll.add(63);
+		oll.add(43);
+		oll.add(53);
+		oll.add(45);
 		oll.add(100);
-		oll.add(20);
-	
+		oll.add(2000);
+		oll.add(1500);
 		oll.add(15);
+		oll.remove(43);
+		oll.remove(2000);
+		oll.show();
+//		System.out.println(oll.search(150));
+//		System.out.println(oll.search(1500));
 		oll.show();
 	}
 
