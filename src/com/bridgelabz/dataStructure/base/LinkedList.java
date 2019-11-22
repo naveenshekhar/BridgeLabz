@@ -234,43 +234,43 @@ public class LinkedList<T> {
 		}
 	}
 
-	public static void main(String[] args) {
-		LinkedList list = new LinkedList();
-
-	//	System.out.println("List is Empty :" + list.isEmpty());
-		list.add("bhai");
-	//	System.out.println("position :" + list.index("bhai"));
-		list.add("nana");
-	//	System.out.println("Size :" + list.size());
-		list.add("kaka");
-		list.add("lala");
-		list.add(5.5);
-		list.add(10);
-		list.show();
-		System.out.println("item :" + list.search(10));
-		list.add(20);
-		list.add(30);
-		list.add(40);
-		list.add(50);
-		list.add(60);
-		System.out.println("hihihAHA :"+list.pop(2));
-		System.out.println("Size :" + list.size());
-		list.show();
-		System.out.println("item :" + list.search("kaka"));
-		System.out.println("item :" + list.search("kaki"));
-		list.pop();
-		list.remove();
-		list.removeItem("nana");
-
-		list.insert(1, 15);
-		list.insert(0, 5);
-		list.append(100);
-		list.show();
-		System.out.println("List is Empty :" + list.isEmpty());
-		System.out.println("Size :" + list.size());
-		System.out.println("item position :" + list.index(60));
+//	public static void main(String[] args) {
+//		LinkedList list = new LinkedList();
+//
+//	//	System.out.println("List is Empty :" + list.isEmpty());
+//		list.add("bhai");
+//	//	System.out.println("position :" + list.index("bhai"));
+//		list.add("nana");
+//	//	System.out.println("Size :" + list.size());
+//		list.add("kaka");
+//		list.add("lala");
+//		list.add(5.5);
+//		list.add(10);
+//		list.show();
+//		System.out.println("item :" + list.search(10));
+//		list.add(20);
+//		list.add(30);
+//		list.add(40);
+//		list.add(50);
+//		list.add(60);
+//		System.out.println("hihihAHA :"+list.pop(2));
+//		System.out.println("Size :" + list.size());
+//		list.show();
+//		System.out.println("item :" + list.search("kaka"));
+//		System.out.println("item :" + list.search("kaki"));
+//		list.pop();
+//		list.remove();
+//		list.removeItem("nana");
+//
+//		list.insert(1, 15);
+//		list.insert(0, 5);
+//		list.append(100);
+//		list.show();
+//		System.out.println("List is Empty :" + list.isEmpty());
+//		System.out.println("Size :" + list.size());
+//		System.out.println("item position :" + list.index(60));
 
 
 	}
 
-}
+
