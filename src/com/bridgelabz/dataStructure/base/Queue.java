@@ -25,28 +25,23 @@ public class Queue<T> {
 			temp.next = node;
 		}
 	}
-	
+
 	/**
 	 * @author naveen
 	 * @purpous returning size of Queue
 	 * @return Integer Size
 	 */
-	public int size()
-	{
-		Node temp=head;
-		int size=0;
-		if(head==null)
-		{
+	public int size() {
+		Node temp = head;
+		int size = 0;
+		if (head == null) {
 			System.out.println("Queue is empty");
-		}
-		else
-		{
-			while(temp!=null)
-			{
+		} else {
+			while (temp != null) {
 				size++;
-				temp=temp.next;			
-			}			
-			return size;		
+				temp = temp.next;
+			}
+			return size;
 		}
 		return -1;
 	}
@@ -77,7 +72,6 @@ public class Queue<T> {
 	}
 
 	/**
-	 * @author naveen
 	 * @purpous Displaying the elements of Queue
 	 * @return void
 	 */
@@ -92,21 +86,6 @@ public class Queue<T> {
 			}
 			System.out.println(temp.data);
 		}
-	}
-
-	public static void main(String[] args) {
-		Queue q = new Queue();
-		System.out.println("isEmpty :" + q.isEmpty());
-		System.out.println("size :"+q.size());
-		q.enqueue("Naveen");
-		System.out.println("size :"+q.size());
-		q.enqueue("Rahul");
-		q.enqueue("Vishal");
-		System.out.println("size :"+q.size());
-		q.dequeue();
-		q.show();
-		System.out.println("isEmpty :" + q.isEmpty());
-
 	}
 
 }

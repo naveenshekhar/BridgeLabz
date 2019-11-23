@@ -1,5 +1,6 @@
 package com.bridgelabz.dataStructure.base;
 
+@SuppressWarnings("rawtypes")
 public class OrderedLinkList<T extends Comparable> {
 	Node head;
 	Node tail;
@@ -14,11 +15,10 @@ public class OrderedLinkList<T extends Comparable> {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	public void add(T item) {
 		Node node = new Node(item);
 		Node temp = head;
-		Node prev = null;
-
 		if (head == null) {
 			head = node;
 		} else if (item.compareTo(head.data) < 0) {
@@ -66,45 +66,33 @@ public class OrderedLinkList<T extends Comparable> {
 	/**
 	 * Search the item in the list and returns boolean
 	 */
-	public boolean search(T item)
-	{
-		Node temp=head;
-		if(head.data.equals(item))
-		{
+	public boolean search(T item) {
+		Node temp = head;
+		if (head.data.equals(item)) {
 			return true;
-		}
-		else
-		{
-			while(temp.next!=null)
-			{
-				temp=temp.next;
-				if(temp.data.equals(item))
-				{
+		} else {
+			while (temp.next != null) {
+				temp = temp.next;
+				if (temp.data.equals(item)) {
 					return true;
 				}
 			}
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Search the item in the list and returns index
 	 */
-	public int index(T item)
-	{
-		Node temp=head;
-		int index=0;
-		if(head.data.equals(item))
-		{
+	public int index(T item) {
+		Node temp = head;
+		int index = 0;
+		if (head.data.equals(item)) {
 			return index;
-		}
-		else
-		{
-			while(temp.next!=null)
-			{
-				temp=temp.next;
-				if(temp.data.equals(item))
-				{
+		} else {
+			while (temp.next != null) {
+				temp = temp.next;
+				if (temp.data.equals(item)) {
 					return index;
 				}
 				index++;
@@ -112,83 +100,71 @@ public class OrderedLinkList<T extends Comparable> {
 		}
 		return -1;
 	}
-	
+
 	/**
 	 * Checks either list is empty or not
 	 */
-	public boolean isEmpty()
-	{
-		if(head==null)
-		{
+	public boolean isEmpty() {
+		if (head == null) {
 			return true;
 		}
 		return false;
 	}
-	
+
 	/**
-	 *Returns the size of the list.
+	 * Returns the size of the list.
 	 */
-	public int size()
-	{ 
-		int size=0;
-		Node temp=head;
-		if(head==null)
-		{
+	public int size() {
+		int size = 0;
+		Node temp = head;
+		if (head == null) {
 			System.out.println("List is Empty");
-		}
-		else;
-		while(temp.next!=null)
-		{
+		} else
+			;
+		while (temp.next != null) {
 			size++;
-			temp=temp.next;	
+			temp = temp.next;
 		}
 		return size;
 	}
-	
+
 	/**
 	 * Removes and returns the last item in the list
 	 */
-	public T pop()
-	{
-		Node temp=head;
-		T item=null;
+	public T pop() {
+		Node temp = head;
+		T item = null;
 		{
-			while(temp.next.next!=null)
-			{
-				temp=temp.next;
+			while (temp.next.next != null) {
+				temp = temp.next;
 			}
-			item=temp.next.data;
-			temp.next=null;
+			item = temp.next.data;
+			temp.next = null;
 			return item;
 		}
-		//return temp.data;
+		// return temp.data;
 	}
-	
+
 	/**
 	 * Removes and returns item at position
 	 */
-	public T pop(int pos)
-	{
-		T item=null;
-		Node temp=head;
-		if(pos==0)
-		{
-			item=head.data;
-			head=head.next;
+	public T pop(int pos) {
+		T item = null;
+		Node temp = head;
+		if (pos == 0) {
+			item = head.data;
+			head = head.next;
+			return item;
+		} else {
+			for (int i = 0; i < pos; i++) {
+				temp = temp.next;
+				item = temp.data;
+			}
+			temp.next = temp.next.next;
 			return item;
 		}
-		else
-		{
-			for(int i=0;i<pos;i++)
-			{
-				temp=temp.next;
-				item=temp.data;
-			}
-			temp.next=temp.next.next;
-			return item;	
-		}
 	}
-	
+
 	/**
 	 * Displaying the output
 	 */
@@ -203,36 +179,6 @@ public class OrderedLinkList<T extends Comparable> {
 			}
 			System.out.println(temp.data);
 		}
-	}
-
-	public static void main(String[] args) {
-
-		OrderedLinkList<Integer> oll = new OrderedLinkList<Integer>();
-
-		System.out.println(oll.isEmpty());
-		oll.add(63);
-		oll.add(43);
-		oll.add(53);
-		oll.add(45);
-		oll.add(100);
-		oll.add(2000);
-		oll.add(1500); 
-		oll.add(15);
-		oll.remove(43);
-		oll.remove(2000);
-		oll.show();
-		System.out.println(oll.isEmpty());
-		System.out.println(oll.search(150));
-		System.out.println(oll.search(1500));
-		oll.show();
-		System.out.println("Size :"+oll.size());
-		System.out.println("Index :"+oll.index(15));
-		System.out.println("Index :"+oll.index(1500));
-		System.out.println("Index :"+oll.index(2000));
-		System.out.println("Last item :"+oll.pop());
-		System.out.println("Popped item :"+oll.pop(1));
-		
-		oll.show();
 	}
 
 }
