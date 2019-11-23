@@ -64,7 +64,7 @@ public class OrderedLinkList<T extends Comparable> {
 	}
 
 	/**
-	 * 
+	 * Search the item in the list and returns boolean
 	 */
 	public boolean search(T item)
 	{
@@ -85,6 +85,32 @@ public class OrderedLinkList<T extends Comparable> {
 			}
 		}
 		return false;
+	}
+	
+	/**
+	 * Search the item in the list and returns index
+	 */
+	public int index(T item)
+	{
+		Node temp=head;
+		int index=0;
+		if(head.data.equals(item))
+		{
+			return index;
+		}
+		else
+		{
+			while(temp.next!=null)
+			{
+				temp=temp.next;
+				if(temp.data.equals(item))
+				{
+					return index;
+				}
+				index++;
+			}
+		}
+		return -1;
 	}
 	
 	/**
@@ -117,6 +143,50 @@ public class OrderedLinkList<T extends Comparable> {
 			temp=temp.next;	
 		}
 		return size;
+	}
+	
+	/**
+	 * Removes and returns the last item in the list
+	 */
+	public T pop()
+	{
+		Node temp=head;
+		T item=null;
+		{
+			while(temp.next.next!=null)
+			{
+				temp=temp.next;
+			}
+			item=temp.next.data;
+			temp.next=null;
+			return item;
+		}
+		//return temp.data;
+	}
+	
+	/**
+	 * Removes and returns item at position
+	 */
+	public T pop(int pos)
+	{
+		T item=null;
+		Node temp=head;
+		if(pos==0)
+		{
+			item=head.data;
+			head=head.next;
+			return item;
+		}
+		else
+		{
+			for(int i=0;i<pos;i++)
+			{
+				temp=temp.next;
+				item=temp.data;
+			}
+			temp.next=temp.next.next;
+			return item;	
+		}
 	}
 	
 	/**
@@ -155,7 +225,14 @@ public class OrderedLinkList<T extends Comparable> {
 		System.out.println(oll.search(150));
 		System.out.println(oll.search(1500));
 		oll.show();
-		System.out.println(oll.size());
+		System.out.println("Size :"+oll.size());
+		System.out.println("Index :"+oll.index(15));
+		System.out.println("Index :"+oll.index(1500));
+		System.out.println("Index :"+oll.index(2000));
+		System.out.println("Last item :"+oll.pop());
+		System.out.println("Popped item :"+oll.pop(1));
+		
+		oll.show();
 	}
 
 }

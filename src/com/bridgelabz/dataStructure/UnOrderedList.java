@@ -15,11 +15,10 @@ public class UnOrderedList {
 		String s;
 		String[] words = null;
 
-		while ((s = br.readLine()) != null) {
-			words = s.split(" ");
-			for (String word : words) {
-				list.add(word);
-			}
+		s = br.readLine();
+		words = s.split(" ");
+		for (String word : words) {
+			list.add(word);
 		}
 		fr.close();
 		FileWriter fw = new FileWriter("/home/naveen/java files/abc.txt");
