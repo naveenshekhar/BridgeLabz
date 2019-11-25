@@ -1,7 +1,5 @@
 package com.bridgelabz.dataStructure.base;
 
-import com.bridgelabz.dataStructure.base.Queue.Node;
-
 public class DeQueue<T> {
 	Node head;
 
@@ -117,19 +115,4 @@ public class DeQueue<T> {
 			System.out.println(temp.data);
 		}
 	}
-
-//	public static void main(String[] args) {
-//		DeQueue dq = new DeQueue();
-//
-//		dq.addRear("Bangalore");
-//		dq.addFront("Mahto");
-//		dq.addFront("Shekhar");
-//		dq.addFront("naveen");
-//		dq.addRear("mumbai");
-//		dq.show();
-//		System.out.println("Deleted data :" + dq.removeFront());
-//		System.out.println("Deleted data :" + dq.removeRear());
-//		dq.show();
-//
-//	}
 }
