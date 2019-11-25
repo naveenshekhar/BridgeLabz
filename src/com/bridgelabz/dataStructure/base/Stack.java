@@ -68,6 +68,22 @@ public class Stack<T> {
 		}
 
 	}
+	
+	/**
+	 * @purpous size of stack
+	 * @return int size
+	 */
+	public int size()
+	{
+		int size=1;
+		Node temp=head;
+		while(temp.next!=null)
+		{
+			size++;
+			temp=temp.next;
+		}
+		return size;
+	}
 
 	/**
 	 * @purpous Ton returns the top data

@@ -5,7 +5,6 @@ import com.bridgelabz.utility.DSUtility;
 public class PrimeAnagram {
 	public static void main(String[] args) {
 		int arr[] = new int[1000];
-		// int arr2D[][] = new int[10][100];
 		int range = 2;
 		for (int i = 0; i < arr.length; i++) {
 			if (DSUtility.isPrime(range)) {

@@ -63,12 +63,15 @@ public class Queue<T> {
 	 * @purpous Removing the elements of Queue
 	 * @return void
 	 */
-	public void dequeue() {
+	public T dequeue() {
+		T temp=null;
 		if (head == null) {
 			System.out.println("Queue is Empty..!!");
 		} else {
+			temp=head.data;
 			head = head.next;
 		}
+		return temp;
 	}
 
 	/**
@@ -77,12 +80,17 @@ public class Queue<T> {
 	 */
 	public void show() {
 		Node temp = head;
+		int g =0;
 		if (head == null) {
 			System.out.println("list is empty..!!");
 		} else {
 			while (temp.next != null) {
+				if(g%2==0) {
+					System.out.println();
+				}
 				System.out.print(temp.data + " ");
 				temp = temp.next;
+				g++;
 			}
 			System.out.println(temp.data);
 		}
