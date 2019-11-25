@@ -536,4 +536,20 @@ public class Utility {
 
 	}
 
+	public static boolean isLeap(int n) 
+	{
+		if (n > 999 && n <= 9999) {
+			if (n % 4 == 0 && n % 400 == 0 || n % 100 != 0) {
+				System.out.println("Leap year.");
+				return true;
+			} else {
+				System.out.println("Not a leap year.");
+			}
+		} else {
+			System.out.println("Please enter 4 digit number.");
+		}
+		sc.close();
+		return false;
+	}
+
 }
