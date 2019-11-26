@@ -1,3 +1,11 @@
+/** **************************************************
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @purpose : Base class for balance parenthesis.
+ * @Date    : 24:11:2019
+ * @File    : Stack.java
+ * ***************************************************/
+
 package com.bridgelabz.dataStructure.base;
 
 public class Stack<T> {
@@ -34,8 +42,8 @@ public class Stack<T> {
 
 	/**
 	 * @purpous Removing(Popping) the elements of Stack
-	 * @param item
-	 * @return void
+	 * @param   item
+	 * @return  void
 	 */
 	public T pop() {
 		T data = null;
@@ -71,7 +79,7 @@ public class Stack<T> {
 	
 	/**
 	 * @purpous size of stack
-	 * @return int size
+	 * @return  int size
 	 */
 	public int size()
 	{
@@ -87,7 +95,7 @@ public class Stack<T> {
 
 	/**
 	 * @purpous Ton returns the top data
-	 * @return top data.
+	 * @return  top data.
 	 */
 
 	public T peek() {
@@ -104,9 +112,9 @@ public class Stack<T> {
 	}
 
 	/**
-	 * @author naveen
+	 * @author  naveen
 	 * @purpous Displaying the elements of stack
-	 * @return void
+	 * @return  void
 	 */
 	public void show() {
 		Node temp = head;
