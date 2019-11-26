@@ -1,3 +1,12 @@
+/** **************************************************
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @purpose : To print the month by taking month and year 
+ * 			  as user input
+ * @Date    : 26:11:2019
+ * @File    : Calendar.java
+ * ***************************************************/
+
 package com.bridgelabz.dataStructure;
 
 import com.bridgelabz.utility.Utility;
@@ -5,15 +14,20 @@ import com.bridgelabz.utility.Utility;
 public class Calendar {
 
 	public static void main(String[] args) {
+
+//Taking user input by command line argument for 
+//month and year.
 		int month = Integer.parseInt(args[0]);
 		int year = Integer.parseInt(args[1]);
 
 		int year1;
 		int month1, x, day = 1, day1;
 		year1 = year - (14 - month) / 12;
+//Formulas to calculate year and month
 		x = year1 + (year1 / 4) - (year1 / 100) + (year1 / 400);
 		month1 = month + 12 * ((14 - month) / 12) - 2;
 		day1 = (day + x + (31 * month1) / 12) % 7;
+//Array for storing the month and their days.
 		String[] monthName = { "January", "February", "March", "April", "May", "June", "July", "August", "September",
 				"October", "November", "December" };
 		int[] monthDays = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -23,6 +37,8 @@ public class Calendar {
 				monthDay = monthDays[i];
 			}
 		}
+		
+//array for storing the whole Month day year.
 		int[][] totalDays = new int[6][7];
 		boolean leap = Utility.isLeap(year);
 		if (leap && month == 1) {
@@ -46,6 +62,8 @@ public class Calendar {
 				System.out.print(monthName[i] + " " + year);
 			}
 		}
+		
+//Printing the calender.
 		System.out.println();
 		String[] dayName = { "S", "M", "T", "W", "T", "F", "S" };
 		for (int i = 0; i < 7; i++) {
