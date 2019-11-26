@@ -1,7 +1,7 @@
-/* **************************************************
+/** **************************************************
  * @Author  : Naveen Shekhar
  * @version : 1.0
- * @purpose: Utility(BASIC, ALGORITHM, FUNCTIONAL, JUNIT AND LOGICAL) 
+ * @purpose : Utility(BASIC, ALGORITHM, FUNCTIONAL, JUNIT AND LOGICAL) 
  * @Date    : 13:11:2019 - 19:11:2019
  * @File    : Utility.java
  * ***************************************************/

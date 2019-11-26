@@ -1,8 +1,19 @@
+/** **************************************************
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @purpose : Base class for UnOrdered list
+ * @Date    : 24:11:2019
+ * @File    : LinkedList.java
+ * ***************************************************/
+
 package com.bridgelabz.dataStructure.base;
 
 public class LinkedList<T> {
 	Node head;
 
+	/**
+	 * @purpuse :Node nested class for implementing/creating new nodes
+	 */
 	public class Node {
 		Node next;
 		T data;
@@ -13,6 +24,12 @@ public class LinkedList<T> {
 		}
 	}
 
+	
+	/**
+	 * @purpose :Add data in list
+	 * @param   :Generic type data
+	 * @return  :Nothing
+	 */
 	public void add(T data) {
 		Node node = new Node(data);
 		Node temp = head;
@@ -27,10 +44,13 @@ public class LinkedList<T> {
 		}
 	}
 
+
 	/**
-	 * removing from end of linked list.
+	 * @purpose :remov node/data in list
+	 * @param   :removing and returning data from end of linked list.
+	 * @return  :Data inside the removed node
 	 */
-	public T pop() {
+	   public T pop() {
 		Node temp = head;
 		T data=null;
 		if (head == null) {
@@ -46,9 +66,11 @@ public class LinkedList<T> {
 		return data;
 	}
 
-	/**
-	 * Removing from list
-	 */
+	   /**
+		 * @purpose :remove node/data in list
+		 * @param   :removing nodes from linked list.
+		 * @return  :Void
+		 */
 	public void remove() {
 		Node temp = head;
 		if (head == null) {
@@ -64,7 +86,9 @@ public class LinkedList<T> {
 	}
 
 	/**
-	 * searching the item
+	 * @purpose :Search the item in list
+	 * @param   :Generic type item
+	 * @return  :boolean
 	 */
 	public boolean search(T item) {
 
@@ -82,7 +106,9 @@ public class LinkedList<T> {
 	}
 
 	/**
-	 * remove a perticular item
+	 * @purpose :Searches and removes the perticular the item in list
+	 * @param   :Generic type item
+	 * @return  :void
 	 */
 	public void removeItem(T item)
 	{
@@ -113,8 +139,11 @@ public class LinkedList<T> {
 		}
 	}
 
+	
 	/**
-	 * Checking either list is empty or not
+	 * @purpose :Checking either list is empty or not
+	 * @param   :Null
+	 * @return  :boolean
 	 */
 	public boolean isEmpty() {
 		if (head == null) {
@@ -123,9 +152,11 @@ public class LinkedList<T> {
 			return false;
 	}
 
+	
 	/**
-	 * 
-	 * @return
+	 * @purpose :Pops the data of given position
+	 * @param   :Integer Position of element
+	 * @return  :Element
 	 */
 	public T pop(int pos)
 	{
@@ -145,12 +176,12 @@ public class LinkedList<T> {
 		}
 		prev.next=temp.next.next;
 		return temp.data;
-
-
 	}
 
 	/**
-	 * Size of the list
+	 * @purpose :To get the size of LL
+	 * @param   :Null
+	 * @return  :Integer size
 	 */
 	public int size() {
 		Node temp = head;
@@ -167,7 +198,9 @@ public class LinkedList<T> {
 	}
 
 	/**
-	 * Adding the node in last of list
+	 * @purpose :Adding the node in last of list
+	 * @param   :Generic type data
+	 * @return  :void
 	 */
 	public void append(T data) {
 		Node node = new Node(data);
@@ -183,7 +216,9 @@ public class LinkedList<T> {
 	}
 
 	/**
-	 * Returns the position of item.
+	 * @purpose :Returns the position of item.
+	 * @param   :Generic type data
+	 * @return  :Integer position
 	 */
 	public int index(T item) {
 		int position = 0;
@@ -202,7 +237,9 @@ public class LinkedList<T> {
 	}
 
 	/**
-	 * Inserting the item in position
+	 * @purpose :Inserting the item in position
+	 * @param   :Generic type data
+	 * @return  :Integer position,data.
 	 */
 	public void insert(int pos, T data) {
 		Node node = new Node(data);
@@ -217,9 +254,10 @@ public class LinkedList<T> {
 		temp.next = node;
 	}
 
-
 	/**
-	 * Displaying the output
+	 * @purpose :Displaying the output
+	 * @param   :Generic type data
+	 * @return  :void
 	 */
 	public void show() {
 		Node temp = head;
@@ -233,44 +271,6 @@ public class LinkedList<T> {
 			System.out.println(temp.data);
 		}
 	}
-
-//	public static void main(String[] args) {
-//		LinkedList list = new LinkedList();
-//
-//	//	System.out.println("List is Empty :" + list.isEmpty());
-//		list.add("bhai");
-//	//	System.out.println("position :" + list.index("bhai"));
-//		list.add("nana");
-//	//	System.out.println("Size :" + list.size());
-//		list.add("kaka");
-//		list.add("lala");
-//		list.add(5.5);
-//		list.add(10);
-//		list.show();
-//		System.out.println("item :" + list.search(10));
-//		list.add(20);
-//		list.add(30);
-//		list.add(40);
-//		list.add(50);
-//		list.add(60);
-//		System.out.println("hihihAHA :"+list.pop(2));
-//		System.out.println("Size :" + list.size());
-//		list.show();
-//		System.out.println("item :" + list.search("kaka"));
-//		System.out.println("item :" + list.search("kaki"));
-//		list.pop();
-//		list.remove();
-//		list.removeItem("nana");
-//
-//		list.insert(1, 15);
-//		list.insert(0, 5);
-//		list.append(100);
-//		list.show();
-//		System.out.println("List is Empty :" + list.isEmpty());
-//		System.out.println("Size :" + list.size());
-//		System.out.println("item position :" + list.index(60));
-
-
-	}
+}
 
 

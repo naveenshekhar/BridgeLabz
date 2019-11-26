@@ -3,7 +3,7 @@
  * @version : 1.0
  * @purpose:  Base class for Palindrome-Checker
  * @Date    : 23:11:2019
- * @File    : Utility.java
+ * @File    : DeQueue.java
  * ***************************************************/
 
 package com.bridgelabz.dataStructure.base;
