@@ -1,3 +1,11 @@
+/* **************************************************
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @purpose:  Base class for Palindrome-Checker
+ * @Date    : 23:11:2019
+ * @File    : Utility.java
+ * ***************************************************/
+
 package com.bridgelabz.dataStructure.base;
 
 public class DeQueue<T> {
@@ -14,6 +22,11 @@ public class DeQueue<T> {
 
 	}
 
+	/**
+	 * @purpous add item at front of the dequeue
+	 * @param   Generic type item
+	 * @return  void
+	 */
 	public void addFront(T item) {
 		Node node = new Node(item);
 		if (head == null) {
@@ -26,7 +39,8 @@ public class DeQueue<T> {
 
 	/**
 	 * @purpous Adding the element in rear.
-	 * @return void
+	 * @param   Generic type item
+	 * @return  void
 	 */
 
 	public void addRear(T item) {
@@ -45,7 +59,8 @@ public class DeQueue<T> {
 
 	/**
 	 * @purpous Removing the elements of DeQueue from front
-	 * @return data stored in head
+	 * @param   nothing
+	 * @return  data stored in head
 	 */
 	public T removeFront() {
 		T data = head.data;
@@ -55,7 +70,8 @@ public class DeQueue<T> {
 
 	/**
 	 * @purpous Removing the elements of DeQueue from rear
-	 * @return data stored in last node
+	 * @param   Nothing
+	 * @return  data stored in last node
 	 */
 	public T removeRear() {
 		Node temp = head;
@@ -72,7 +88,8 @@ public class DeQueue<T> {
 	
 	/**
 	 * @purpous Checking waether list is empty or not
-	 * @return boolean
+	 * @param   Nothing
+	 * @return  boolean
 	 */
 	public boolean isEmpty() {
 		if (head == null) {
@@ -83,7 +100,8 @@ public class DeQueue<T> {
 	
 	/**
 	 * @purpous returning size of deQueue
-	 * @return Integer Size
+	 * @param   Nothing
+	 * @return  Integer Size
 	 */
 	public int size() {
 		Node temp = head;
@@ -101,7 +119,8 @@ public class DeQueue<T> {
 	}
 	/**
 	 * @purpous Displaying the elements of DeQueue
-	 * @return void
+	 * @param   Nothing
+	 * @return  void
 	 */
 	public void show() {
 		Node temp = head;
