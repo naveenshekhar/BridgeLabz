@@ -1,3 +1,11 @@
+/** **************************************************
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @purpose : Base class to simulate banking cash counter.
+ * @Date    : 23:11:2019
+ * @File    : Queue.java
+ * ***************************************************/
+
 package com.bridgelabz.dataStructure.base;
 
 public class Queue<T> {
@@ -12,7 +20,11 @@ public class Queue<T> {
 			this.next = null;
 		}
 	}
-
+	/**
+	 * @purpous:Adding elements to the Queue
+	 * @param  :Nothing
+	 * @return :void
+	 */
 	public void enqueue(T data) {
 		Node node = new Node(data);
 		Node temp = head;
@@ -27,9 +39,9 @@ public class Queue<T> {
 	}
 
 	/**
-	 * @author naveen
+	 * @author  naveen
 	 * @purpous returning size of Queue
-	 * @return Integer Size
+	 * @return  Integer Size
 	 */
 	public int size() {
 		Node temp = head;
@@ -47,9 +59,9 @@ public class Queue<T> {
 	}
 
 	/**
-	 * @author naveen
+	 * @author  naveen
 	 * @purpous Checking Queue is empty or not.
-	 * @return boolean
+	 * @return  boolean
 	 */
 	public boolean isEmpty() {
 		if (head == null) {
@@ -59,9 +71,9 @@ public class Queue<T> {
 	}
 
 	/**
-	 * @author naveen
+	 * @author  naveen
 	 * @purpous Removing the elements of Queue
-	 * @return void
+	 * @return  void
 	 */
 	public T dequeue() {
 		T temp=null;
@@ -75,8 +87,9 @@ public class Queue<T> {
 	}
 
 	/**
-	 * @purpous Displaying the elements of Queue
-	 * @return void
+	 * @purpous:Displaying the elements of Queue
+	 * @param  :Nothing
+	 * @return :void
 	 */
 	public void show() {
 		Node temp = head;
