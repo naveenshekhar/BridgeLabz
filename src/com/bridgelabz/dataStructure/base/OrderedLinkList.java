@@ -1,10 +1,21 @@
+/** **************************************************
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @purpose : LinkedList base class for ordered-list. 
+ * @Date    : 23:11:2019
+ * @File    : OrderedLinkList.java
+ * ***************************************************/
+
 package com.bridgelabz.dataStructure.base;
 
+
 @SuppressWarnings("rawtypes")
-public class OrderedLinkList<T extends Comparable> {
+public class OrderedLinkList<T extends Comparable> {  //T extends comparable to get the features of it.
 	Node head;
 	Node tail;
 
+	
+	//Node class created
 	class Node {
 		T data;
 		Node next;
@@ -15,6 +26,7 @@ public class OrderedLinkList<T extends Comparable> {
 		}
 	}
 
+	//Add method to add item in linked list
 	@SuppressWarnings("unchecked")
 	public void add(T item) {
 		Node node = new Node(item);
