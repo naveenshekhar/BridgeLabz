@@ -19,7 +19,6 @@ public class DeQueue<T> {
 			this.data = data;
 			this.next = null;
 		}
-
 	}
 
 	/**

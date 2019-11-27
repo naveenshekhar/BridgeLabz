@@ -15,7 +15,7 @@ public class LinkedList<T> {
 	 * @purpuse :Node nested class for implementing/creating new nodes
 	 */
 	public class Node {
-		Node next;
+		public Node next;
 		T data;
 
 		public Node(T data) {
