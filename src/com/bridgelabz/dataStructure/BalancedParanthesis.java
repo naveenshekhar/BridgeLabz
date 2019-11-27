@@ -26,7 +26,7 @@ public class BalancedParanthesis {
 				bp.pop();
 			}
 		}
-    //to check list is empty or not
+//to check list is empty or not
 		if (bp.isEmpty() == true) {
 			System.out.println("true");
 		} else {
