@@ -9,10 +9,10 @@
  * ***************************************************/
 package com.bridgelabz.objectOrientedP;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -41,17 +41,25 @@ public class InventoryManagement {
 		inventory.add(obj);
 		inventory.add(obj1);
 		inventory.add(obj2);
-		// try-with-resources statement based on post comment below :)
-		try (FileWriter file = new FileWriter("/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/test2.json")) {
+		// try-with-resources statement.
+		try (FileWriter file = new FileWriter(
+				"/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/test2.json")) {
 			file.write(inventory.toJSONString());
 			// System.out.println(inventory);
-		} catch (IOException e) {
+		} catch(FileNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 		try {
 			JSONParser parser = new JSONParser();
-			Object parse = parser
-					.parse(new FileReader("/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/test2.json"));
+			Object parse = parser.parse(new FileReader("/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/test2.json"));
 			JSONArray JSON = (JSONArray) parse;
 
 			for (Object j : JSON) {
@@ -61,7 +69,15 @@ public class InventoryManagement {
 				System.out.println("Weight :" + N.get("weight"));
 			}
 
-		} catch (Exception e) {
+		}catch(FileNotFoundException e)
+		{
+			e.printStackTrace();
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
