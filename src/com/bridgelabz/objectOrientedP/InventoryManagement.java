@@ -32,7 +32,7 @@ public class InventoryManagement
 			String 	ratePerKG=(String) jsonObject.get("Rate/KG");
 			System.out.println("Rate per KG is :"+ratePerKG);
 			total=(Integer.parseInt(weight))*(Integer.parseInt(ratePerKG));
-			System.out.println("Total price of weight :"+total);
+			System.out.println("Total price of wheat :"+total);
 			
 //Loop through Array and print
 			JSONArray groceryArray = (JSONArray) jsonObject.get("grocery");
