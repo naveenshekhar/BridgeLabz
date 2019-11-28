@@ -7,7 +7,7 @@
  * @Date    : 13:11:2019 - 19:11:2019
  * @File    : InventoryManagement.java
  * ***************************************************/
-package com.bridgelabz.objectOrientedP;
+package com.bridgelabz.objectOrientedP.repository;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
