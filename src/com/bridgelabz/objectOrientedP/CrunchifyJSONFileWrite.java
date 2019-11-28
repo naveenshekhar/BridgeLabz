@@ -35,36 +35,27 @@ public class CrunchifyJSONFileWrite {
 		inventory.add(obj1);
 		inventory.add(obj2);
 		// try-with-resources statement based on post comment below :)
-		try (FileWriter file = new FileWriter("/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/Test.json")) {
+		try (FileWriter file = new FileWriter(
+				"/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/Test.json")) {
 			file.write(inventory.toJSONString());
-			//System.out.println(inventory);
+			// System.out.println(inventory);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		try
-		{
-		JSONParser parser =new JSONParser();
-		Object parse=parser.parse(new FileReader("/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/Test.json"));
-		JSONArray JSON =(JSONArray) parse;
-		
-	  for(Object j : JSON) {
-		  JSONObject N = (JSONObject) j;
-		  System.out.println("Name :"+N.get("Name"));
-		  System.out.println("Price :"+N.get("price"));
-		  System.out.println("Weight :"+N.get("weight"));
-	  }
-		
-//		JSONObject jsonObject=(JSONObject) parse; 
-//		String name=(String) jsonObject.get("Name");
-//		System.out.println("Name is :"+name);
-//		
-//		String weight=(String) jsonObject.get("Weight");
-//		System.out.println("Weight is :"+weight);
-//		
-//		String 	price=(String) jsonObject.get("Rate/KG");
-//		System.out.println("Rate per KG is :"+price);	
-		}catch(Exception e)
-		{
+		try {
+			JSONParser parser = new JSONParser();
+			Object parse = parser
+					.parse(new FileReader("/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/Test.json"));
+			JSONArray JSON = (JSONArray) parse;
+
+			for (Object j : JSON) {
+				JSONObject N = (JSONObject) j;
+				System.out.println("Name :" + N.get("Name"));
+				System.out.println("Price :" + N.get("price"));
+				System.out.println("Weight :" + N.get("weight"));
+			}
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
