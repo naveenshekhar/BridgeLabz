@@ -8,6 +8,7 @@ import org.json.simple.parser.JSONParser;
 
 public class InventoryManagement 
 {
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) 
 	{
 		JSONParser parser =new JSONParser();
