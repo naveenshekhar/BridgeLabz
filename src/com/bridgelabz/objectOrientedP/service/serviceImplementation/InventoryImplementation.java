@@ -12,10 +12,10 @@ import com.bridgelabz.objectOrientedP.service.InventoryInterface;
 import com.bridgelabz.utility.Utility;
 
 public class InventoryImplementation implements InventoryInterface {
-	
-	static int price=0;
-	static int weight=0;
-	
+
+	static int price = 0;
+	static int total = 0;
+
 	@SuppressWarnings({ "unchecked" })
 	@Override
 	public void add() {
@@ -142,29 +142,47 @@ public class InventoryImplementation implements InventoryInterface {
 		}
 		return null;
 	}
-	
-	public static void parseInventory(JSONObject obj)
-	{
-		JSONObject jobj=(JSONObject) obj.get(inventory);
-	}
 
-	@Override
-	public void totalPrice() {
-		price =0;
-		price=0;
-		
-		JSONArray jarr=readFile();
-		jarr.forEach(emp->);
+	public static void parseInventory(JSONObject obj) {
+		JSONObject jobj = (JSONObject) obj.get("Inventory");
+		String name = (String) jobj.get("Name");
+		System.out.println("Name " + name);
+		System.out.println("Name  : " + name);
+		String Weight = String.valueOf(jobj.get("Weight"));
+		System.out.println("Weight: " + Weight);
+		String Price = String.valueOf(jobj.get("PricePerKg"));
+		System.out.println("Price : " + Price);
 
 	}
 
 	@Override
 	public void totalWeight() {
+		long total = 0;
+		try {
+			JSONParser jpar = new JSONParser();
+			Object obj = jpar
+					.parse(new FileReader("/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/test2.json"));
+			JSONArray jarr = (JSONArray) obj;
+			for (Object i : jarr) {
+				JSONObject jobj = (JSONObject) i;
+				long a = (long) jobj.get("weight");
+				total = total + a;
+			}
+			System.out.println(total);
 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void exit() {
+
+	}
+
+	@Override
+	public void totalPrice() {
+		// TODO Auto-generated method stub
 
 	}
 
