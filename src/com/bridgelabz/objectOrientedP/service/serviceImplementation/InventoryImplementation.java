@@ -4,17 +4,19 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
 import com.bridgelabz.objectOrientedP.model.InventoryModel;
 import com.bridgelabz.objectOrientedP.service.InventoryInterface;
 import com.bridgelabz.utility.Utility;
 
 public class InventoryImplementation implements InventoryInterface {
-	@SuppressWarnings({ "hiding", "unchecked" })
+	
+	static int price=0;
+	static int weight=0;
+	
+	@SuppressWarnings({ "unchecked" })
 	@Override
 	public void add() {
 		try {
@@ -95,9 +97,8 @@ public class InventoryImplementation implements InventoryInterface {
 			JSONArray jarray = (JSONArray) jp.parse(fr);
 			for (int i = 0; i < jarray.size(); i++) {
 				JSONObject jobj = (JSONObject) jarray.get(i);
-				JSONObject jobj1 = (JSONObject) jobj.get("inventory");
 
-				if (item.equals(jobj1.get("Name"))) {
+				if (item.equals(jobj.get("Name"))) {
 					jarray.remove(jobj);
 					result = false;
 					break;
@@ -123,21 +124,47 @@ public class InventoryImplementation implements InventoryInterface {
 		}
 	}
 
+	public static JSONArray readFile() {
+		try {
+			FileReader fw = new FileReader("/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/test2.json");
+			JSONParser jpar = new JSONParser();
+			Object obj = jpar.parse(fw);
+			JSONArray jarr = (JSONArray) obj;
+
+			return jarr;
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public static void parseInventory(JSONObject obj)
+	{
+		JSONObject jobj=(JSONObject) obj.get(inventory);
+	}
+
 	@Override
 	public void totalPrice() {
-		// TODO Auto-generated method stub
+		price =0;
+		price=0;
+		
+		JSONArray jarr=readFile();
+		jarr.forEach(emp->);
 
 	}
 
 	@Override
 	public void totalWeight() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void exit() {
-		// TODO Auto-generated method stub
 
 	}
 
