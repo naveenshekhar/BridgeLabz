@@ -20,13 +20,11 @@ public class Stack<T> {
 			this.next = null;
 		}
 	}
-
 	/**
 	 * @purpous pushing the data into stack
 	 * @param c
 	 * @return void
 	 */
-
 	public void push(T c) {
 		Node node = new Node(c);
 		Node temp = head;
@@ -39,7 +37,6 @@ public class Stack<T> {
 			temp.next = node;
 		}
 	}
-
 	/**
 	 * @purpous Removing(Popping) the elements of Stack
 	 * @param   item

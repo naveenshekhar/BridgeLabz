@@ -2,11 +2,11 @@ package com.bridgelabz.dataStructure;
 
 public class BinarySearchTree {
 	class Node {
-		int key;
+		int data;
 		Node left, right;
 
-		public Node(int item) {
-			key = item;
+		public Node(int data) {
+			this.data = data;
 			left = right = null;
 		}
 	}
@@ -17,22 +17,22 @@ public class BinarySearchTree {
 		root = null;
 	}
 
-	void insert(int key) {
-		root = insertRec(root, key);
+	void insert(int data) {
+		root = insertRec(root, data);
 	}
 
-	Node insertRec(Node root, int key) {
+	Node insertRec(Node root, int data) {
 
 		/* If the tree is empty, return a new node */
 		if (root == null) {
-			root = new Node(key);
+			root = new Node(data);
 			return root;
 		}
 		/* Otherwise, recur down the tree */
-		if (key < root.key)
-			root.left = insertRec(root.left, key);
-		else if (key > root.key)
-			root.right = insertRec(root.right, key);
+		if (data < root.data)
+			root.left = insertRec(root.left, data);
+		else if (data > root.data)
+			root.right = insertRec(root.right, data);
 
 		/* return the (unchanged) node pointer */
 		return root;
@@ -47,93 +47,86 @@ public class BinarySearchTree {
 	void inorderRec(Node root) {
 		if (root != null) {
 			inorderRec(root.left);
-			System.out.println(root.key);
+			System.out.println(root.data);
 			inorderRec(root.right);
 		}
 	}
-	   public void deleteKey(int key) 
-	    { 
-	        root = deleteRec(root, key); 
-	    } 
-	  
-	    /* A recursive function to insert a new key in BST */
-	    Node deleteRec(Node root, int key) 
-	    { 
-	        /* Base Case: If the tree is empty */
-	        if (root == null)  return root; 
-	  
-	        /* Otherwise, recur down the tree */
-	        if (key < root.key) 
-	            root.left = deleteRec(root.left, key); 
-	        else if (key > root.key) 
-	            root.right = deleteRec(root.right, key); 
-	  
-	        // if key is same as root's key, then This is the node 
-	        // to be deleted 
-	        else
-	        { 
-	            // node with only one child or no child 
-	            if (root.left == null) 
-	                return root.right; 
-	            else if (root.right == null) 
-	                return root.left; 
-	  
-	            // node with two children: Get the inorder successor (smallest 
-	            // in the right subtree) 
-	            root.key = minValue(root.right); 
-	  
-	            // Delete the inorder successor 
-	            root.right = deleteRec(root.right, root.key); 
-	        } 
-	  
-	        return root; 
-	    } 
-	    public int minValue(Node root) 
-	    { 
-	        int minv = root.key; 
-	        while (root.left != null) 
-	        { 
-	            minv = root.left.key; 
-	            root = root.left; 
-	        } 
-	        return minv; 
-	    } 
-		
-		// A utility function to search a given key in BST 
-		public Node search(Node root, int key) 
-		{ 
-			// Base Cases: root is null or key is present at root 
-			if (root==null || root.key==key) 
-				return root; 
 
-			// val is greater than root's key 
-			if (root.key > key) 
-				return search(root.left, key); 
+	public void deletedata(int data) {
+		root = deleteRec(root, data);
+	}
 
-			// val is less than root's key 
-			return search(root.right, key); 
-		} 
+	/* A recursive function to insert a new data in BST */
+	Node deleteRec(Node root, int data) {
+		/* Base Case: If the tree is empty */
+		if (root == null)
+			return root;
 
+		/* Otherwise, recur down the tree */
+		if (data < root.data)
+			root.left = deleteRec(root.left, data);
+		else if (data > root.data)
+			root.right = deleteRec(root.right, data);
 
-		// Driver Program to test above functions 
-		public static void main(String[] args) { 
-			BinarySearchTree tree = new BinarySearchTree(); 
+		// if data is same as root's data, then This is the node
+		// to be deleted
+		else {
+			// node with only one child or no child
+			if (root.left == null)
+				return root.right;
+			else if (root.right == null)
+				return root.left;
 
-		
-			tree.insert(50); 
-			tree.insert(30); 
-			tree.insert(20); 
-			tree.insert(40); 
-			tree.insert(70); 
-			tree.insert(60); 
-			tree.insert(80); 
+			// node with two children: Get the inorder successor (smallest
+			// in the right subtree)
+			root.data = minValue(root.right);
 
-			// print inorder traversal of the BST 
-			tree.inorder(); 
-			System.out.println();
-			tree.deleteKey(50);
-			tree.inorder(); 
-		} 
-	} 
+			// Delete the inorder successor
+			root.right = deleteRec(root.right, root.data);
+		}
 
+		return root;
+	}
 
+	public int minValue(Node root) {
+		int minv = root.data;
+		while (root.left != null) {
+			minv = root.left.data;
+			root = root.left;
+		}
+		return minv;
+	}
+
+	// A utility function to search a given data in BST
+	public Node search(Node root, int data) {
+		// Base Cases: root is null or data is present at root
+		if (root == null || root.data == data)
+			return root;
+
+		// val is greater than root's data
+		if (root.data > data)
+			return search(root.left, data);
+
+		// val is less than root's data
+		return search(root.right, data);
+	}
+
+	// Driver Program to test above functions
+	public static void main(String[] args) {
+		BinarySearchTree tree = new BinarySearchTree();
+
+		tree.insert(50);
+		tree.insert(30);
+		tree.insert(20);
+		tree.insert(40);
+		tree.insert(70);
+		tree.insert(60);
+		tree.insert(80);
+
+		// print inorder traversal of the BST
+		tree.inorder();
+		System.out.println();
+		tree.deletedata(50);
+		tree.inorder();
+	}
+}

@@ -187,8 +187,7 @@ public class InventoryImplementation implements InventoryInterface {
 		long overall = 0;
 		try {
 			JSONParser jpar = new JSONParser();
-			Object obj = jpar
-					.parse(new FileReader("/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/test2.json"));
+			Object obj = jpar.parse(new FileReader("/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/test2.json"));
 			JSONArray jarr = (JSONArray) obj;
 			// System.out.println(jarr);
 
