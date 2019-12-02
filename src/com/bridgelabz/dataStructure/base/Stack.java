@@ -20,6 +20,7 @@ public class Stack<T> {
 			this.next = null;
 		}
 	}
+
 	/**
 	 * @purpous pushing the data into stack
 	 * @param c
@@ -37,10 +38,11 @@ public class Stack<T> {
 			temp.next = node;
 		}
 	}
+
 	/**
 	 * @purpous Removing(Popping) the elements of Stack
-	 * @param   item
-	 * @return  void
+	 * @param item
+	 * @return void
 	 */
 	public T pop() {
 		T data = null;
@@ -73,26 +75,24 @@ public class Stack<T> {
 		}
 
 	}
-	
+
 	/**
 	 * @purpous size of stack
-	 * @return  int size
+	 * @return int size
 	 */
-	public int size()
-	{
-		int size=1;
-		Node temp=head;
-		while(temp.next!=null)
-		{
+	public int size() {
+		int size = 1;
+		Node temp = head;
+		while (temp.next != null) {
 			size++;
-			temp=temp.next;
+			temp = temp.next;
 		}
 		return size;
 	}
 
 	/**
 	 * @purpous Ton returns the top data
-	 * @return  top data.
+	 * @return top data.
 	 */
 
 	public T peek() {
@@ -109,9 +109,9 @@ public class Stack<T> {
 	}
 
 	/**
-	 * @author  naveen
+	 * @author naveen
 	 * @purpous Displaying the elements of stack
-	 * @return  void
+	 * @return void
 	 */
 	public void show() {
 		Node temp = head;

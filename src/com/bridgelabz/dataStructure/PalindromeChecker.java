@@ -1,3 +1,11 @@
+/** **************************************************
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @purpose : Program to check user inputed number is palindrome or not
+ * @Date    : 25:11:2019
+ * @File    : PalindromeChecke.java
+ * ***************************************************/
+
 package com.bridgelabz.dataStructure;
 
 import com.bridgelabz.dataStructure.base.DeQueue;

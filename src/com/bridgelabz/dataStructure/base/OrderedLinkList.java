@@ -2,20 +2,18 @@
  * @Author  : Naveen Shekhar
  * @version : 1.0
  * @purpose : LinkedList base class for ordered-list. 
- * @Date    : 23:11:2019
+ * @Date    : 25:11:2019
  * @File    : OrderedLinkList.java
  * ***************************************************/
 
 package com.bridgelabz.dataStructure.base;
 
-
 @SuppressWarnings("rawtypes")
-public class OrderedLinkList<T extends Comparable> {  //T extends comparable to get the features of it.
+public class OrderedLinkList<T extends Comparable> { // T extends comparable to get the features of it.
 	Node head;
 	Node tail;
 
-	
-	//Node class created
+	// Node class created
 	class Node {
 		T data;
 		Node next;
@@ -26,7 +24,12 @@ public class OrderedLinkList<T extends Comparable> {  //T extends comparable to 
 		}
 	}
 
-	//Add method to add item in linked list
+	//
+	/**
+	 * @purpose Add method to add item in linked list
+	 * @param item
+	 * @return void
+	 */
 	@SuppressWarnings("unchecked")
 	public void add(T item) {
 		Node node = new Node(item);
@@ -52,7 +55,9 @@ public class OrderedLinkList<T extends Comparable> {  //T extends comparable to 
 	}
 
 	/**
-	 * Removing the perticular element
+	 * @purpose Search the item in the list and removes it
+	 * @param item
+	 * @return void
 	 */
 	public void remove(T item) {
 		Node temp = head;
@@ -76,7 +81,9 @@ public class OrderedLinkList<T extends Comparable> {  //T extends comparable to 
 	}
 
 	/**
-	 * Search the item in the list and returns boolean
+	 * @purpose Search the item in the list and returns boolean
+	 * @param item
+	 * @return boolean
 	 */
 	public boolean search(T item) {
 		Node temp = head;
@@ -94,7 +101,10 @@ public class OrderedLinkList<T extends Comparable> {  //T extends comparable to 
 	}
 
 	/**
-	 * Search the item in the list and returns index
+	 * Purpose Search the item in the list and returns index
+	 * 
+	 * @param item
+	 * @return Int position
 	 */
 	public int index(T item) {
 		Node temp = head;
@@ -114,7 +124,10 @@ public class OrderedLinkList<T extends Comparable> {  //T extends comparable to 
 	}
 
 	/**
-	 * Checks either list is empty or not
+	 * Purpose Checks either list is empty or not
+	 * 
+	 * @param --
+	 * @return Boolean
 	 */
 	public boolean isEmpty() {
 		if (head == null) {
@@ -124,7 +137,10 @@ public class OrderedLinkList<T extends Comparable> {  //T extends comparable to 
 	}
 
 	/**
-	 * Returns the size of the list.
+	 * Purpose Returns the size of the list.
+	 * 
+	 * @param --
+	 * @return integer size.
 	 */
 	public int size() {
 		int size = 0;
@@ -141,7 +157,10 @@ public class OrderedLinkList<T extends Comparable> {  //T extends comparable to 
 	}
 
 	/**
-	 * Removes and returns the last item in the list
+	 * Purpose Removes and returns the last item in the list
+	 * 
+	 * @param position
+	 * @return popped element
 	 */
 	public T pop() {
 		Node temp = head;
@@ -154,11 +173,13 @@ public class OrderedLinkList<T extends Comparable> {  //T extends comparable to 
 			temp.next = null;
 			return item;
 		}
-		// return temp.data;
 	}
 
 	/**
-	 * Removes and returns item at position
+	 * Purpose Removes and returns item at position
+	 * 
+	 * @param position
+	 * @return poppedelement
 	 */
 	public T pop(int pos) {
 		T item = null;
@@ -178,7 +199,10 @@ public class OrderedLinkList<T extends Comparable> {  //T extends comparable to 
 	}
 
 	/**
-	 * Displaying the output
+	 * Purpose Displaying the output
+	 * 
+	 * @param --
+	 * @return void
 	 */
 	public void show() {
 		Node temp = head;

@@ -1,3 +1,11 @@
+/** **************************************************
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @purpose : Program to print prime and anagram numbers
+ * @Date    : 26:11:2019
+ * @File    : PrimeAnagram.java
+ * ***************************************************/
+
 package com.bridgelabz.dataStructure;
 
 import com.bridgelabz.utility.DSUtility;

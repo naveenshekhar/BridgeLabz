@@ -1,3 +1,11 @@
+/** **************************************************
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @purpose : Binary Search tree
+ * @Date    : 25:11:2019
+ * @File    : BinarySearchTree.java
+ * ***************************************************/
+
 package com.bridgelabz.dataStructure;
 
 public class BinarySearchTree {

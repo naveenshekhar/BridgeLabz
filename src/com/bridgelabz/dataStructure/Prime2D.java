@@ -1,3 +1,11 @@
+/** **************************************************
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @purpose : Program to store the prime numbers in 2D array
+ * @Date    : 25:11:2019
+ * @File    : Prime2D.java
+ * ***************************************************/
+
 package com.bridgelabz.dataStructure;
 
 import com.bridgelabz.utility.DSUtility;

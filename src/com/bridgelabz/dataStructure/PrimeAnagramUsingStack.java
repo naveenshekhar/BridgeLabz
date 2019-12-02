@@ -1,3 +1,12 @@
+/** **************************************************
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @purpose : Program to Add the Prime Numbers that are Anagram 
+ * 			  in the Range of 0 - 1000 in a Stack using the Linked
+ * @Date    : 26:11:2019
+ * @File    : PrimeAnagramUsingStack.java
+ * ***************************************************/
+
 package com.bridgelabz.dataStructure;
 
 import com.bridgelabz.dataStructure.base.Stack;

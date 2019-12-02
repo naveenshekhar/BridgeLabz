@@ -24,11 +24,10 @@ public class LinkedList<T> {
 		}
 	}
 
-	
 	/**
 	 * @purpose :Add data in list
-	 * @param   :Generic type data
-	 * @return  :Nothing
+	 * @param :Generic type data
+	 * @return :Nothing
 	 */
 	public void add(T data) {
 		Node node = new Node(data);
@@ -44,15 +43,14 @@ public class LinkedList<T> {
 		}
 	}
 
-
 	/**
 	 * @purpose :remov node/data in list
-	 * @param   :removing and returning data from end of linked list.
-	 * @return  :Data inside the removed node
+	 * @param :removing and returning data from end of linked list.
+	 * @return :Data inside the removed node
 	 */
-	   public T pop() {
+	public T pop() {
 		Node temp = head;
-		T data=null;
+		T data = null;
 		if (head == null) {
 			System.out.println("List is Empty..!!");
 		} else {
@@ -60,23 +58,22 @@ public class LinkedList<T> {
 				temp = temp.next;
 			}
 			System.out.println("Removed element :" + temp.next.data);
-			data=(T)temp.data; 
+			data = (T) temp.data;
 			temp.next = null;
 		}
 		return data;
 	}
 
-	   /**
-		 * @purpose :remove node/data in list
-		 * @param   :removing nodes from linked list.
-		 * @return  :Void
-		 */
+	/**
+	 * @purpose :remove node/data in list
+	 * @param :removing nodes from linked list.
+	 * @return :Void
+	 */
 	public void remove() {
 		Node temp = head;
 		if (head == null) {
 			System.out.println("List is Empty..!!");
-		} else 
-		{
+		} else {
 			while (temp.next.next != null) {
 				temp = temp.next;
 			}
@@ -87,8 +84,8 @@ public class LinkedList<T> {
 
 	/**
 	 * @purpose :Search the item in list
-	 * @param   :Generic type item
-	 * @return  :boolean
+	 * @param :Generic type item
+	 * @return :boolean
 	 */
 	public boolean search(T item) {
 
@@ -107,43 +104,35 @@ public class LinkedList<T> {
 
 	/**
 	 * @purpose :Searches and removes the perticular the item in list
-	 * @param   :Generic type item
-	 * @return  :void
+	 * @param :Generic type item
+	 * @return :void
 	 */
-	public void removeItem(T item)
-	{
-		Node temp=head;
-		Node prev=null;
-		if(head==null)
-		{
+	public void removeItem(T item) {
+		Node temp = head;
+		Node prev = null;
+		if (head == null) {
 			System.out.println("List is empty..!!");
 			return;
 		}
-		if(head.data.equals(item))
-		{
+		if (head.data.equals(item)) {
 			head = head.next;
-		}
-		else
-		{
-			while(temp.next!=null)
-			{
-				if(temp.data.equals(item))
-				{
-					System.out.println("Removed :"+temp.data);
-					prev.next=temp.next;	
+		} else {
+			while (temp.next != null) {
+				if (temp.data.equals(item)) {
+					System.out.println("Removed :" + temp.data);
+					prev.next = temp.next;
 					return;
 				}
-				prev=temp;
-				temp=temp.next;
+				prev = temp;
+				temp = temp.next;
 			}
 		}
 	}
 
-	
 	/**
 	 * @purpose :Checking either list is empty or not
-	 * @param   :Null
-	 * @return  :boolean
+	 * @param :Null
+	 * @return :boolean
 	 */
 	public boolean isEmpty() {
 		if (head == null) {
@@ -152,36 +141,32 @@ public class LinkedList<T> {
 			return false;
 	}
 
-	
 	/**
 	 * @purpose :Pops the data of given position
-	 * @param   :Integer Position of element
-	 * @return  :Element
+	 * @param :Integer Position of element
+	 * @return :Element
 	 */
-	public T pop(int pos)
-	{
-		Node temp=head;
-		Node prev=null;
-		T data=null;
-		if(pos==0)
-		{ 
-			data=(T)head.data;
-			head=head.next;
+	public T pop(int pos) {
+		Node temp = head;
+		Node prev = null;
+		T data = null;
+		if (pos == 0) {
+			data = (T) head.data;
+			head = head.next;
 			return (T) data;
 		}
-		for(int i=0;i<pos;i++)
-		{
-			prev=temp;
-			temp=temp.next;
+		for (int i = 0; i < pos; i++) {
+			prev = temp;
+			temp = temp.next;
 		}
-		prev.next=temp.next.next;
+		prev.next = temp.next.next;
 		return temp.data;
 	}
 
 	/**
 	 * @purpose :To get the size of LL
-	 * @param   :Null
-	 * @return  :Integer size
+	 * @param :Null
+	 * @return :Integer size
 	 */
 	public int size() {
 		Node temp = head;
@@ -199,8 +184,8 @@ public class LinkedList<T> {
 
 	/**
 	 * @purpose :Adding the node in last of list
-	 * @param   :Generic type data
-	 * @return  :void
+	 * @param :Generic type data
+	 * @return :void
 	 */
 	public void append(T data) {
 		Node node = new Node(data);
@@ -217,8 +202,8 @@ public class LinkedList<T> {
 
 	/**
 	 * @purpose :Returns the position of item.
-	 * @param   :Generic type data
-	 * @return  :Integer position
+	 * @param :Generic type data
+	 * @return :Integer position
 	 */
 	public int index(T item) {
 		int position = 0;
@@ -238,8 +223,8 @@ public class LinkedList<T> {
 
 	/**
 	 * @purpose :Inserting the item in position
-	 * @param   :Generic type data
-	 * @return  :Integer position,data.
+	 * @param :Generic type data
+	 * @return :Integer position,data.
 	 */
 	public void insert(int pos, T data) {
 		Node node = new Node(data);
@@ -247,7 +232,7 @@ public class LinkedList<T> {
 		if (pos == 0) {
 			head = node;
 		} else
-			for (int i = 0; i < pos-1; i++) {
+			for (int i = 0; i < pos - 1; i++) {
 				temp = temp.next;
 			}
 		node.next = temp.next;
@@ -256,8 +241,8 @@ public class LinkedList<T> {
 
 	/**
 	 * @purpose :Displaying the output
-	 * @param   :Generic type data
-	 * @return  :void
+	 * @param :Generic type data
+	 * @return :void
 	 */
 	public void show() {
 		Node temp = head;
@@ -272,5 +257,3 @@ public class LinkedList<T> {
 		}
 	}
 }
-
-

@@ -1,3 +1,11 @@
+/** **************************************************
+ * @Author  : Naveen Shekhar
+ * @version : 1.0
+ * @purpose : Hashing Function
+ * @Date    : 25:11:2019
+ * @File    : HashingFunction.java
+ * ***************************************************/
+
 package com.bridgelabz.dataStructure;
 
 import java.io.FileReader;
