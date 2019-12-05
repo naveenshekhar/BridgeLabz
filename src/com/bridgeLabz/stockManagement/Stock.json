@@ -1,0 +1,12 @@
+[
+	{
+		"priceOfShare :": 10000,
+		"Name :": "Reliance",
+		"NumberOfShare :": 40
+	},
+	{
+		"priceOfShare :": 50,
+		"Name :": "TATA",
+		"NumberOfShare :": 5000
+	}
+]
