@@ -23,7 +23,6 @@ public class InventoryImplementation implements InventoryInterface {
 //File reader to read the files from inventory and parse them 
 //to store in new array .
 			FileReader fr = new FileReader("/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/test2.json");
-
 			JSONParser jParse = new JSONParser();// jsonparser is used to read json data
 			Object obj = jParse.parse(fr);
 			JSONArray jarray = (JSONArray) obj;

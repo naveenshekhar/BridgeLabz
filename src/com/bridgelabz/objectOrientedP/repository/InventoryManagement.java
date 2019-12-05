@@ -57,6 +57,8 @@ public class InventoryManagement {
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		
 		try {
 			JSONParser parser = new JSONParser();
 			Object parse = parser.parse(new FileReader("/home/naveen/git/BridgeLabz/src/com/bridgelabz/objectOrientedP/test2.json"));
