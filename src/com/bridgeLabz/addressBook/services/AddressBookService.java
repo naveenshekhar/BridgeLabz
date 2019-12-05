@@ -7,6 +7,7 @@ import org.json.simple.JSONObject;
 
 import com.bridgeLabz.addressBook.model.Person;
 
+
 public interface AddressBookService {
 
 	void store(Person person);
