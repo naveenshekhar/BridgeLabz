@@ -1,9 +1,13 @@
 package com.bridgelabz.designPattern.structural.factoryDesignPattern.services;
 
-public interface Computer {
-	public String Ram();
-
-	public String HDD();
-
-	public String CPU();
+public abstract class Computer {
+	
+	public abstract String getRAM();
+	public abstract String getHDD();
+	public abstract String getCPU();
+	
+	@Override
+	public String toString(){
+		return "RAM= "+this.getRAM()+", HDD="+this.getHDD()+", CPU="+this.getCPU();
+	}
 }
