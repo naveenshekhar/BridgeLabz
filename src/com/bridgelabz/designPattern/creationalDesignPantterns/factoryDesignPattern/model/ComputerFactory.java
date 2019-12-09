@@ -5,9 +5,11 @@
  * @date ->  08:12:2019
  * @FileName ComputerFactory.java 
  ***********************************************/ 
-package com.bridgelabz.designPattern.structural.factoryDesignPattern.model;
+package com.bridgelabz.designPattern.creationalDesignPantterns.factoryDesignPattern.model;
 
-import com.bridgelabz.designPattern.structural.factoryDesignPattern.services.Computer;
+import java.util.Scanner;
+
+import com.bridgelabz.designPattern.creationalDesignPantterns.factoryDesignPattern.services.Computer;
 
 public class ComputerFactory {
 
@@ -16,7 +18,8 @@ public class ComputerFactory {
 			return new PCModel(ram, hdd, cpu);
 		else if ("Server".equalsIgnoreCase(type))
 			return new LaptopModel(ram, hdd, cpu);
+ 
 
-		return null;
+return null;
 	}
 }

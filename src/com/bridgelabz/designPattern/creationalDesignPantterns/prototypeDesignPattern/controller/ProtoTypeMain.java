@@ -6,11 +6,11 @@
  * @FileName ProtoTypeMain.java
  **********************************************/
 
-package com.bridgelabz.designPattern.structural.prototypeDesignPattern.controller;
+package com.bridgelabz.designPattern.creationalDesignPantterns.prototypeDesignPattern.controller;
 
 import java.util.List;
 
-import com.bridgelabz.designPattern.structural.prototypeDesignPattern.model.Employees;
+import com.bridgelabz.designPattern.creationalDesignPantterns.prototypeDesignPattern.model.Employees;
 
 public class ProtoTypeMain  {
 	

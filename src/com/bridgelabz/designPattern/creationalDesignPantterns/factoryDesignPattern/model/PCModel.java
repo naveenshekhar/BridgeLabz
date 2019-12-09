@@ -6,9 +6,9 @@
  * @FileName PCModel.java 
  ***********************************************/  
 
-package com.bridgelabz.designPattern.structural.factoryDesignPattern.model;
+package com.bridgelabz.designPattern.creationalDesignPantterns.factoryDesignPattern.model;
 
-import com.bridgelabz.designPattern.structural.factoryDesignPattern.services.Computer;
+import com.bridgelabz.designPattern.creationalDesignPantterns.factoryDesignPattern.services.Computer;
 
 public class PCModel extends Computer {
 

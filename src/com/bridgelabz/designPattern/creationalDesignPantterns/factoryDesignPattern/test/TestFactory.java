@@ -6,10 +6,10 @@
  * @FileName TestFactory.java  
  ***********************************************/
 
-package com.bridgelabz.designPattern.structural.factoryDesignPattern.test;
+package com.bridgelabz.designPattern.creationalDesignPantterns.factoryDesignPattern.test;
  
-import com.bridgelabz.designPattern.structural.factoryDesignPattern.model.ComputerFactory;
-import com.bridgelabz.designPattern.structural.factoryDesignPattern.services.Computer;
+import com.bridgelabz.designPattern.creationalDesignPantterns.factoryDesignPattern.model.ComputerFactory;
+import com.bridgelabz.designPattern.creationalDesignPantterns.factoryDesignPattern.services.Computer;
 
 public class TestFactory 
 {

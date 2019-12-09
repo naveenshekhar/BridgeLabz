@@ -6,7 +6,7 @@
  * @FileName Employees.java
  **********************************************/
 
-package com.bridgelabz.designPattern.structural.prototypeDesignPattern.model;
+package com.bridgelabz.designPattern.creationalDesignPantterns.prototypeDesignPattern.model;
 
 import java.util.ArrayList;
 import java.util.List;
