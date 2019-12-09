@@ -3,7 +3,7 @@
  * @version  1.0
  * @purpose  parent class of factory design pattern
  * @date ->  08:12:2019
- * @FileName Computer.java 
+ * @FileName Computer.java  
  ***********************************************/
 package com.bridgelabz.designPattern.structural.factoryDesignPattern.services;
 
