@@ -3,7 +3,7 @@
  * @version  1.0
  * @purpose  Test class for factory design pattern
  * @date     08:12:2019
- * @FileName TestFactory.java 
+ * @FileName TestFactory.java  
  ***********************************************/
 
 package com.bridgelabz.designPattern.structural.factoryDesignPattern.test;
@@ -13,7 +13,7 @@ import com.bridgelabz.designPattern.structural.factoryDesignPattern.services.Com
 
 public class TestFactory 
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)  
 	{
 		Computer pc = ComputerFactory.getComputer("pc","2 GB","500 GB","2.4 GHz");
 		Computer server = ComputerFactory.getComputer("server","16 GB","1 TB","2.9 GHz");
