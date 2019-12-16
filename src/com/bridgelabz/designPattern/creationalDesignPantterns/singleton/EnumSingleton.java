@@ -1,4 +1,4 @@
-package com.bridgelabz.designPattern.structural.singleton;
+package com.bridgelabz.designPattern.creationalDesignPantterns.singleton;
 
 public enum EnumSingleton {
 	INSTANCE;

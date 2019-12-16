@@ -5,7 +5,7 @@
  * @date ->  08:12:2019
  * @FileName Computer.java  
  ***********************************************/
-package com.bridgelabz.designPattern.structural.factoryDesignPattern.services;
+package com.bridgelabz.designPattern.creationalDesignPantterns.factoryDesignPattern.services;
 
 public abstract class Computer { 
 	
