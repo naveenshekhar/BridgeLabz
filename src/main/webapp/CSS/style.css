@@ -1,0 +1,16 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 43vh;
+	border: 1px solid;
+	width: 29em;
+	background: linear-gradient(11deg, #841616, transparent);
+	text-shadow: 0 0 dimgrey;
+    background: powderblue;
+    font-size: x-large;
+    font-style: oblique;
+    align-content: center;
+	@charset
+	"UTF-8";
+}
