@@ -33,30 +33,27 @@ public class Success extends HttpServlet {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sonu", "naveen", "admin");
-			PreparedStatement ps = con.prepareStatement("insert into user(username,password,name,email) values (?,?,?,?)");
+			PreparedStatement ps = con
+					.prepareStatement("insert into user(username,password,name,email) values (?,?,?,?)");
 
 			ps.setString(1, username);
 			ps.setString(2, password);
 			ps.setString(3, name);
 			ps.setString(4, email);
 
-			  int i = ps.executeUpdate();
-	          String msg=" ";
-	          if(i!=0){  
-	            msg="Record has been inserted";
-	            out.println("<font size='6' color=blue>" + msg + "</font>");  
-               
-
-	          }  
-	          else{  
-	            msg="failed to insert the data";
-	            out.println("<font size='6' color=blue>" + msg + "</font>");
-	           }  
-	          ps.close();
-	        }  
-	        catch (Exception e){  
-	          out.println(e);  
-	        }  
+			int i = ps.executeUpdate();
+			String msg = " ";
+			if (i != 0) {
+				msg = "Record has been inserted";
+				out.println("<font size='6' color=blue>" + msg + "</font>");
+			} else {
+				msg = "failed to insert the data";
+				out.println("<font size='6' color=blue>" + msg + "</font>");
+			}
+			ps.close();
+		} catch (Exception e) {
+			out.println(e);
+		}
 	}
 
 }

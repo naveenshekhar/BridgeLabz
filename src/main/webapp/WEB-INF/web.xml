@@ -16,6 +16,12 @@
   	<description></description>
   	<servlet-class>Successer</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Update</servlet-name>
+  	<display-name>Update</display-name>
+  	<description></description>
+  	<servlet-class>Update</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Success</servlet-name>
   	<url-pattern>/Success</url-pattern>
@@ -23,6 +29,10 @@
   <servlet-mapping>
   	<servlet-name>Successer</servlet-name>
   	<url-pattern>/Successer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Update</servlet-name>
+  	<url-pattern>/Update</url-pattern>
   </servlet-mapping>
 <!--   <servlet>
   	<servlet-name>AddUser</servlet-name>

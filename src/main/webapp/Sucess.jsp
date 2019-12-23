@@ -31,6 +31,8 @@
 						<th scope="col">Password</th>
 						<th scope="col">Name</th>
 						<th scope="col">EmailId</th>
+						<th scope="col">Update</th>
+						<td><a href="update.jsp">Update</a></td>
 					</tr>
 				</thead>
 				<%
@@ -54,6 +56,7 @@
 						<td><%=rs.getString("password") %></td>
 						<td><%=rs.getString("name")%></td>
 						<td><%=rs.getString("email")%></td>
+						
 					</tr>
 				</tbody>
 			
