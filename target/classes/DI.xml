@@ -7,13 +7,20 @@
 
 	<bean id="student"
 		class="com.bridgelabz.spring.dependencyinjection.Student">
-		<property name="name" value="Sonu"></property>
+		<constructor-arg name="name" value="Sonu"></constructor-arg>
 	</bean>
 
 	<bean id="student1"
 		class="com.bridgelabz.spring.dependencyinjection.Student">
-		<property name="name" value="Suraj"></property>
+		<constructor-arg name="name" value="Suraj"></constructor-arg>
 	</bean>
+
+
+	<!-- using Setter method -->
+	<!-- <bean id="student" class="com.bridgelabz.spring.dependencyinjection.Student"> 
+		<property name="name" value="Sonu"></property> </bean> <bean id="student1" 
+		class="com.bridgelabz.spring.dependencyinjection.Student"> <property name="name" 
+		value="Suraj"></property> </bean> -->
 
 
 </beans>

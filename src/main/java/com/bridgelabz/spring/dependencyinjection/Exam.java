@@ -9,16 +9,23 @@ public class Exam {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("DI.xml");
 
+		
+//By using Constructor injection
 		Student s = context.getBean("student", Student.class);
 		s.display();
-
 		Student s1 = context.getBean("student1", Student.class);
 		s1.display();
 
+//By using Setter method
+		/*
+		 * Student s = context.getBean("student", Student.class); s.display();
+		 * 
+		 * Student s1 = context.getBean("student1", Student.class); s1.display();
+		 */
+
 //  Without Spring
 		/*
-		 * Student s = new Student(); 
-		 * s.setName("Sonu"); s.display();
+		 * Student s = new Student(); s.setName("Sonu"); s.display();
 		 */
 	}
 
