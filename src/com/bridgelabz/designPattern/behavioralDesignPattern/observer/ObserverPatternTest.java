@@ -6,6 +6,9 @@ public class ObserverPatternTest {
 		//create subject
 		MyTopic topic = new MyTopic();
 		
+
+
+
 		//create observers
 		Observer obj1 = new MyTopicSubscriber("Obj1");
 		Observer obj2 = new MyTopicSubscriber("Obj2");
